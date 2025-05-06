@@ -154,7 +154,9 @@ export default function Navbar() {
           </Link>
           <Link
             href="/calender"
-            className="block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full"
+            className={`btn ${
+              theme === "light" ? "Nav-btn-light" : "Nav-btn-dark"
+            }`}
           >
             Want a Free Audit?
           </Link>
