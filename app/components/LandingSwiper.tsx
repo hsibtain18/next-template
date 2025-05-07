@@ -6,16 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
  
 
 export default function LandingSwiper() {
-    function handleSwiperReadied(swiper) {
-        setTimeout(() => {
-          for (let i = 0; i < swiper?.slides?.length; i++) {
-            swiper.slides[i].childNodes[0].setAttribute(
-              "data-swiper-parallax",
-              0.75 * swiper.width
-            );
-          }
-        }, 0);
-      }
+    
   return (
     <header  className="slider slider-prlx fixed-slider text-center">
     <div className="swiper-container parallax-slider">
@@ -33,7 +24,6 @@ export default function LandingSwiper() {
         el: ".swiper-pagination",
       }}
       className="min-h-screen "
-      onSwiper={handleSwiperReadied}
     >
       <SwiperSlide>
         <div className="text-2xl text-white flex justify-center  min-h-screen ">Slide 1</div>
