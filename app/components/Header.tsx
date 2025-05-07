@@ -41,6 +41,8 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
+        <div className="flex justify-end gap-4">
+
         <div className="hidden lg:flex items-center gap-6">
           <Link href="/" className="hover:text-blue-500 nav-link">
             Home
@@ -100,6 +102,7 @@ export default function Navbar() {
           >
             Want a Free Audit?
           </Link>
+         
         </div>
         <div className="flex items-center gap-4">
           <button className="lg:hidden text-xl" onClick={toggleMenu}>
@@ -110,6 +113,7 @@ export default function Navbar() {
           </button>
 
           {/* Mobile Menu Toggle */}
+        </div>
         </div>
       </div>
 
