@@ -100,6 +100,7 @@ export default function Navbar() {
           >
             Want a Free Audit?
           </Link>
+        </div>
         <div className="flex items-center gap-4">
           <button className="lg:hidden text-xl" onClick={toggleMenu}>
             {menuOpen ? <X /> : <AlignJustify />}
@@ -111,7 +112,6 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
         </div>
       </div>
-        </div>
 
         {/* Theme toggle (moved out of mobile menu) */}
 
