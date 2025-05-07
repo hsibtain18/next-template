@@ -76,7 +76,7 @@ const ParticlesComponent = () => {
     return (
       <Particles
         id="tsparticles"
-        className={`absolute inset-0 -z-10 w-full h-full`}
+        className={`absolute  w-full h-full`}
         particlesLoaded={particlesLoaded}
         options={options}
       />

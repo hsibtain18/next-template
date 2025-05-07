@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 shadow-md transition ${navClasses}`}
     >
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center text-[12px]">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
           <Image
@@ -42,13 +42,9 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-6">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link href="/" className="hover:text-blue-500 nav-link">
-                Home
-              </Link>
-            </li>
-          </ul>
+          <Link href="/" className="hover:text-blue-500 nav-link">
+            Home
+          </Link>
           <Link href="/about" className="hover:text-blue-500 nav-link">
             About
           </Link>
@@ -104,9 +100,6 @@ export default function Navbar() {
           >
             Want a Free Audit?
           </Link>
-        </div>
-
-        {/* Theme toggle (moved out of mobile menu) */}
         <div className="flex items-center gap-4">
           <button className="lg:hidden text-xl" onClick={toggleMenu}>
             {menuOpen ? <X /> : <AlignJustify />}
@@ -118,6 +111,9 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
         </div>
       </div>
+        </div>
+
+        {/* Theme toggle (moved out of mobile menu) */}
 
       {/* Mobile Nav */}
       {menuOpen && (
