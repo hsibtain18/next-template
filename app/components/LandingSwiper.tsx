@@ -29,13 +29,17 @@ export default function LandingSwiper() {
   ];
 
   return (
-    <header className="slider slider-prlx fixed-slider text-center">
+    <header className="slider slider-prlx relative w-full h-full   text-center">
       <div className="swiper-container parallax-slider">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
-          speed={1000}
+          speed={1500}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           navigation={{
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
@@ -49,16 +53,17 @@ export default function LandingSwiper() {
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full">
-              <div className="circle-color">
-                <div className="gradient-circle"></div>
-                <div className="gradient-circle two"></div>
-              </div>
-              <div className="text-2xl text-white flex justify-center   min-h-screen ">
+              <div className="text-2xl flex items-center justify-center h-screen w-full  text-white ">
                 {item.title}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="circle-color">
+        {" "}
+        <div className="gradient-circle"></div>
+        <div className="gradient-circle two"></div>
       </div>
     </header>
     // <Swiper
