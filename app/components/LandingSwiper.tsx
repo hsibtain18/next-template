@@ -36,7 +36,7 @@ export default function LandingSwiper() {
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
-          speed={15400}
+          speed={1500}
           autoplay={{
             delay: 34000,
             disableOnInteraction: false,
@@ -55,9 +55,9 @@ export default function LandingSwiper() {
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
               <div className="sm:px-5 text-2xl flex items-center justify-center h-screen w-full   ">
-                <div className="caption">
+                <div className="caption lg:w-1/2 sm:w-full">
                   <h1 className="color-font">{item.title}</h1>
-                  <p>{item.content}</p>
+                  <p className="mb-20">{item.content}</p>
                   <Link href={item.route} className="butn bord curve mt-[50px]">
                     {" "}
                     Load More
