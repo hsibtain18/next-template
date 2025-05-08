@@ -3,10 +3,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
 import Link from "next/link";
-// import { useTheme } from "next-themes";
+import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
+import { useTheme } from "next-themes";
 
 export default function LandingSwiper() {
-//   const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const introData = [
     {
@@ -72,15 +73,18 @@ export default function LandingSwiper() {
           ))}
         </Swiper>
         <div className="setone setwo">
-        <div   className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
-          <i className="fas fa-chevron-right"></i>
+        <div   className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]">
+          {/* <i className="fas fa-chevron-right"></i> */}
+          <ChevronRight size={20}  />
+          
         </div>
         <div   className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
-          <i className="fas fa-chevron-left"></i>
+          {/* <i className="fas fa-chevron-left"></i> */}
+          <ChevronLeft size={20}  />
         </div>
       </div>
       <div   className={`swiper-pagination top botm `}></div>
-
+      {/* color={theme !== 'dark'? '#FFFFFF' :'#000000'} */}
       </div>
       <div className="circle-color">
         {" "}

@@ -321,15 +321,15 @@ body {
   -webkit-text-stroke: 0.5px var(--color-value);
 }
 
-.slider .swiper-pagination-fraction.top .swiper-pagination-current:after {
+/* .slider .swiper-pagination-fraction.top .swiper-pagination-current:after {
   content: "/";
-  /* color: #fff; */
+  /* color: #fff; 
   color: var(--color-value);
   position: relative;
   margin: 0 10px;
   font-size: 12px;
   font-weight: 100;
-}
+} */
 
 .slider .swiper-pagination-fraction.top.botm {
   top: auto;
