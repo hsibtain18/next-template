@@ -6,8 +6,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-value: #000000;
 }
-
+.dark {
+  --color-value: #ffffff;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -88,7 +91,7 @@ body {
 }
 
 .slider .parallax-slider {
-  position: relative;
+  /* position: relative; */
 }
 
 .slider .parallax-slider .swiper-slide {
@@ -305,22 +308,23 @@ body {
   bottom: auto;
   top: 20%;
   width: auto;
-  color: #fff;
+  color: var(--color-value);
   font-size: 40px;
   font-weight: 500;
 }
-
+ 
 .slider .swiper-pagination-fraction.top .swiper-pagination-current {
   font-size: 60px;
   font-weight: 700;
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-stroke: 0.5px var(--color-value);
 }
 
 .slider .swiper-pagination-fraction.top .swiper-pagination-current:after {
   content: "/";
-  color: #fff;
+  /* color: #fff; */
+  color: var(--color-value);
   position: relative;
   margin: 0 10px;
   font-size: 12px;
@@ -701,7 +705,8 @@ body {
   left: 60px;
   bottom: 30px;
   width: auto;
-  color: #fff;
+  /* color: #fff; */
+  color: var(--color-value);
   font-size: 40px;
   font-weight: 500;
 }
@@ -711,12 +716,13 @@ body {
   font-weight: 700;
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-stroke: 0.5px var(--color-value);
 }
 
 .slider-bus .swiper-pagination-fraction .swiper-pagination-current:after {
   content: "/";
-  color: #fff;
+  color: var(--color-value);
+  /* color: #fff; */
   position: relative;
   margin: 0 10px;
   font-size: 12px;

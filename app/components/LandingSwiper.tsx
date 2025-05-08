@@ -3,8 +3,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
 import Link from "next/link";
+// import { useTheme } from "next-themes";
 
 export default function LandingSwiper() {
+//   const { theme, setTheme } = useTheme();
+
   const introData = [
     {
       id: 1,
@@ -76,7 +79,7 @@ export default function LandingSwiper() {
           <i className="fas fa-chevron-left"></i>
         </div>
       </div>
-      <div   className="swiper-pagination top botm"></div>
+      <div   className={`swiper-pagination top botm `}></div>
 
       </div>
       <div className="circle-color">
