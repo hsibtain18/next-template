@@ -15,7 +15,7 @@ export default function Home() {
     </section>
   
     {/* Scrollable Section Below */}
-    <section className="p-8 sm:p-20">
+    <section  >
       <Counter />
     </section>
   </div>

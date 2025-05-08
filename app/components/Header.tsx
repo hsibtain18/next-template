@@ -21,7 +21,7 @@ export default function Navbar() {
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   const navClasses =
-    theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white";
+    theme === "light" ? "  text-black" : " text-white";
 
   return (
     <nav
