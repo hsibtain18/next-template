@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Link from "next/link";
 
 export default function LandingSwiper() {
   const introData = [
@@ -35,9 +36,9 @@ export default function LandingSwiper() {
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
-          speed={1500}
+          speed={15400}
           autoplay={{
-            delay: 3000,
+            delay: 34000,
             disableOnInteraction: false,
           }}
           navigation={{
@@ -49,12 +50,19 @@ export default function LandingSwiper() {
             type: "fraction",
             el: ".swiper-pagination",
           }}
-          className="min-h-screen "
+          className="min-h-screen  swiper-wrapper"
         >
           {introData.map((item) => (
-            <SwiperSlide key={item.title} className="w-full">
-              <div className="text-2xl flex items-center justify-center h-screen w-full  text-white ">
-                {item.title}
+            <SwiperSlide key={item.title} className="w-full swiper-slide">
+              <div className="sm:px-5 text-2xl flex items-center justify-center h-screen w-full   ">
+                <div className="caption">
+                  <h1 className="color-font">{item.title}</h1>
+                  <p>{item.content}</p>
+                  <Link href={item.route} className="butn bord curve mt-[50px]">
+                    {" "}
+                    Load More
+                  </Link>
+                </div>
               </div>
             </SwiperSlide>
           ))}

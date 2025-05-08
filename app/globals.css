@@ -833,3 +833,29 @@ body {
   right: -250px;
   background-image: linear-gradient(45deg, #fb5343, #6549d5);
 }
+
+.color-font {
+  background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+  background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.butn {
+  padding: 15px 35px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  transition: all .4s
+}
+
+.butn:hover .char {
+  -webkit-animation: fadeInUp .3s cubic-bezier(.3,0,.7,1) both;
+  animation: fadeInUp .3s cubic-bezier(.3,0,.7,1) both;
+  -webkit-animation-delay: calc(30ms*var(--char-index));
+  animation-delay: calc(30ms*var(--char-index))
+}
+
+.butn.bord {
+  border: 1px solid #fff
+}
