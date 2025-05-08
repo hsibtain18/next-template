@@ -5,9 +5,12 @@ import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
 // import { useTheme } from "next-themes";
-
+import { SocialIcon } from "react-social-icons/component";
+import "react-social-icons/facebook";
+import "react-social-icons/linkedin";
+import "react-social-icons/instagram";
 export default function LandingSwiper() {
-//   const { theme } = useTheme();
+  //   const { theme } = useTheme();
 
   const introData = [
     {
@@ -73,18 +76,34 @@ export default function LandingSwiper() {
           ))}
         </Swiper>
         <div className="setone setwo">
-        <div   className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]">
-          {/* <i className="fas fa-chevron-right"></i> */}
-          <ChevronRight size={20}  />
-          
+          <div className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]">
+            {/* <i className="fas fa-chevron-right"></i> */}
+            <ChevronRight size={20} />
+          </div>
+          <div className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+            {/* <i className="fas fa-chevron-left"></i> */}
+            <ChevronLeft size={20} />
+          </div>
         </div>
-        <div   className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
-          {/* <i className="fas fa-chevron-left"></i> */}
-          <ChevronLeft size={20}  />
+        <div className={`swiper-pagination top botm `}></div>
+        {/* color={theme !== 'dark'? '#FFFFFF' :'#000000'} */}
+        <div className="social-icon">
+          <SocialIcon
+            url="www.facebook.com"
+            bgColor="transparent"
+            href="https://www.facebook.com/share/1DpZghiiTp/?mibextid=wwXIfr"
+            style={{
+                height:40,
+                width:40
+            }}
+          />
+          <SocialIcon url="www.linkedin.com" bgColor="transparent" />
+          <SocialIcon
+            url="www.instagram.com"
+            bgColor="transparent"
+            href="https://www.instagram.com/ectorious.official/"
+          />
         </div>
-      </div>
-      <div   className={`swiper-pagination top botm `}></div>
-      {/* color={theme !== 'dark'? '#FFFFFF' :'#000000'} */}
       </div>
       <div className="circle-color">
         {" "}
