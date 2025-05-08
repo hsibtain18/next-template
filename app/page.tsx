@@ -4,7 +4,7 @@ import ParticlesComponent from "./components/Particles";
 
 export default function Home() {
   return (
-    <div className="pt-20 font-[family-name:var(--font-poppins)]">
+    <div className=" font-[family-name:var(--font-poppins)]">
     {/* Landing Section */}
     <section className="relative h-screen overflow-hidden">
       {/* Particles + Gradient */}
