@@ -93,15 +93,26 @@ export default function LandingSwiper() {
             bgColor="transparent"
             href="https://www.facebook.com/share/1DpZghiiTp/?mibextid=wwXIfr"
             style={{
-                height:40,
-                width:40
+              height: 40,
+              width: 40,
             }}
           />
-          <SocialIcon url="www.linkedin.com" bgColor="transparent" />
+          <SocialIcon
+            url="www.linkedin.com"
+            bgColor="transparent"
+            style={{
+              height: 40,
+              width: 40,
+            }}
+          />
           <SocialIcon
             url="www.instagram.com"
             bgColor="transparent"
             href="https://www.instagram.com/ectorious.official/"
+            style={{
+              height: 40,
+              width: 40,
+            }}
           />
         </div>
       </div>
