@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
 export default function LandingSwiper() {
-  const { theme } = useTheme();
+//   const { theme } = useTheme();
 
   const introData = [
     {
