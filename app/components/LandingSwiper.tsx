@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
 import Link from "next/link";
 
 export default function LandingSwiper() {
@@ -33,10 +33,11 @@ export default function LandingSwiper() {
     <header className="slider slider-prlx relative w-full h-full   text-center">
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Pagination, Navigation, Autoplay]}
+          modules={[Parallax, Navigation, Pagination, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
+          parallax={true}
           autoplay={{
             delay: 34000,
             disableOnInteraction: false,
@@ -67,6 +68,16 @@ export default function LandingSwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="setone setwo">
+        <div   className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+          <i className="fas fa-chevron-right"></i>
+        </div>
+        <div   className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+          <i className="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <div   className="swiper-pagination top botm"></div>
+
       </div>
       <div className="circle-color">
         {" "}
