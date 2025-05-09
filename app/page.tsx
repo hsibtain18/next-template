@@ -1,3 +1,4 @@
+import AboutUs from "./components/Aboutus";
 import Counter from "./components/Counter";
 import LandingSwiper from "./components/LandingSwiper";
 import ParticlesComponent from "./components/Particles";
@@ -16,6 +17,7 @@ export default function Home() {
   
     {/* Scrollable Section Below */}
     <section  >
+      <AboutUs/>
       <Counter />
     </section>
   </div>

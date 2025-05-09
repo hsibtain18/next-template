@@ -46,7 +46,7 @@ export default function LandingSwiper() {
           speed={1500}
           parallax={true}
           autoplay={{
-            delay: 34000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           navigation={{
