@@ -1,6 +1,33 @@
+"use client";
 import React from "react";
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 const AboutUs = () => {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (textRef.current) {
+      gsap.to(textRef.current, {
+        duration: 15,
+        scrambleText: {
+          text: aboutData.content,
+          chars: "upperCase",
+        },
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none",
+          once: true, // only once
+        },
+      });
+    }
+  }, []);
   const aboutData = {
     id: 1,
     smallTitle: "About Us",
@@ -14,36 +41,25 @@ const AboutUs = () => {
     ],
   };
   return (
-    <section className="flex row-auto">
-      <div className="w-1/2">
-        <div className="mb-50">
-          <h6 className="fw-100 text-u ls10 mb-10">{aboutData.smallTitle}</h6>
-          <h3 className="fw-600 text-u ls1 mb-30 color-font">
-            {aboutData.title}
-          </h3>
-          <p>{aboutData.content}</p>
-          {/* <!-- <NuxtLink to="#" className="butn bord curve mt-30">
+    <section className="container mx-auto px-4">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="w-1/2 overflow-hidden ">
+          <div className="mb-50">
+            <h6 className="fw-100 text-u ls10 mb-10">{aboutData.smallTitle}</h6>
+            <h3 className="fw-600 text-u ls1 mb-30 color-font">
+              {aboutData.title}
+            </h3>
+            {/* <p>{aboutData.content}</p> */}
+            <p className=" mt-10" ref={textRef}>
+              {/* Loading... */}
+            </p>
+            {/* <!-- <NuxtLink to="#" className="butn bord curve mt-30">
               <span>Read More</span>
             </NuxtLink> -->
             <NuxtLink :to="aboutRoute" className="butn bord curve mt-30"><span>Read More</span></NuxtLink> */}
+          </div>
         </div>
-      </div>
-      <div className="w-1/2">
-        <div className=" dull-image">
-          {/* <NuxtImg format="webp" :src="aboutData.image" :alt="aboutData.title"
-              sizes="(max-width: 640px) 320px, 1024px" lazy native /> */}
-        </div>
-        <div className="stauts">
-          {aboutData.status.map((statue) => (
-            <div className="item" key={statue.id}>
-              <h4>
-                {statue.number}
-                <span>{statue.letter}</span>
-              </h4>
-              <h6>{statue.statusName}</h6>
-            </div>
-          ))}
-        </div>
+       
       </div>
     </section>
   );
