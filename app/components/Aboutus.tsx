@@ -59,7 +59,9 @@ const AboutUs = () => {
             <NuxtLink :to="aboutRoute" className="butn bord curve mt-30"><span>Read More</span></NuxtLink> */}
           </div>
         </div>
-       
+       <div className="w-full md:w-1/2 h-[500px]">
+                    <p>advava</p>
+       </div>
       </div>
     </section>
   );
