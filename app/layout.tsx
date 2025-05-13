@@ -3,18 +3,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
-import { Poppins } from 'next/font/google';
+import { Poppins } from "next/font/google";
 import ScrollToTopButton from "./components/CursorToTop";
 import MouseCursor from "./components/MouseCursor";
 
- 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
- 
 
 export const metadata: Metadata = {
   title: "Ectorious ",
@@ -27,14 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  suppressHydrationWarning >
-      <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
-      >
-         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header/>
-          <ScrollToTopButton/>
-          <MouseCursor/>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <ScrollToTopButton />
+          <MouseCursor />
           {children}
         </ThemeProvider>
       </body>
