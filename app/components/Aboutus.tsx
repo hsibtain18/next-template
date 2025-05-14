@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
+// import Image from "next/image";
 import CountUp from "react-countup";
 import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
