@@ -29,7 +29,7 @@ const SubHeaderFeature = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-100 mx-auto">
-        <div className="  flex flex-col items-center text-center " ref={box1} data-wow-delay=".3s">
+        <div className="  flex flex-col items-center text-center my-10 " ref={box1} data-wow-delay=".3s">
           <div className="item-box md-mb50 cont text-center">
             <div className="svgContainer">
               <svg
@@ -56,7 +56,7 @@ const SubHeaderFeature = () => {
             </div>
           </div>
         </div>
-        <div className="  flex flex-col items-center text-center " ref={box2} data-wow-delay=".3s">
+        <div className="  flex flex-col items-center text-center my-10 " ref={box2} data-wow-delay=".3s">
           <div className="item-box md-mb50 cont  text-center">
             <div className="svgContainer">
               <svg
@@ -86,7 +86,7 @@ const SubHeaderFeature = () => {
             </div>
           </div>
         </div>
-        <div className="  flex flex-col items-center text-center " ref={box3} data-wow-delay=".3s">
+        <div className="  flex flex-col items-center text-center my-10 " ref={box3} data-wow-delay=".3s">
           <div className="item-box md-mb50 cont  text-center">
             <div className="svgContainer">
               <svg

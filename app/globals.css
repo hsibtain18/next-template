@@ -932,29 +932,29 @@ p {
 }
 
 .fadeInLeft {
-	-webkit-animation-name: fadeInLeft;
-	-moz-animation-name: fadeInLeft;
-	-o-animation-name: fadeInLeft;
-	animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
 .services.box .item-box {
   border: 0;
   border-radius: 15px;
-  background: hsla(0,0%,100%,.01)
+  background: hsla(0, 0%, 100%, 0.01);
 }
 
 .services.box .item-box .icon {
-  font-size: 60px
+  font-size: 60px;
 }
 
 .services.box .item-box .icon:after {
-  display: none
+  display: none;
 }
 
 .services .item-box {
   padding: 80px 30px;
   text-align: center;
-  border: 1px solid hsla(0,0%,100%,.05)
+  border: 1px solid hsla(0, 0%, 100%, 0.05);
 }
 
 .services .item-box .icon {
@@ -963,7 +963,7 @@ p {
   height: 80px;
   line-height: 80px;
   font-size: 40px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .services .item-box .icon:after {
@@ -974,19 +974,19 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: linear-gradient(90deg,#12c2e9,#c471ed,#f64f59);
+  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
   z-index: -1;
-  opacity: .05
+  opacity: 0.05;
 }
 
 .services .item-box h6 {
   line-height: 1.8;
   text-transform: capitalize;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
-.services .rone>div {
-  position: relative
+.services .rone > div {
+  position: relative;
 }
 
 .svgContainer {
@@ -1141,7 +1141,7 @@ body {
 .about-us .img {
   padding-left: 150px;
   padding-right: 50px;
-  position: relative
+  position: relative;
 }
 
 .about-us .img:before {
@@ -1153,15 +1153,15 @@ body {
   height: 400px;
   background-image: url(/img/dots.png);
   background-repeat: repeat;
-  opacity: .3;
-  z-index: -1
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .about-us .img .stauts {
   position: absolute;
   bottom: 50px;
   left: 30px;
-  display: flex
+  display: flex;
 }
 
 .about-us .img .stauts .item {
@@ -1179,12 +1179,12 @@ body {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  border: 1px solid hsla(0,0%,100%,.2)
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
 }
 
 .about-us .img .stauts .item:first-of-type {
   background: #fff;
-  color: #121a21
+  color: #121a21;
 }
 
 .about-us .img .stauts .item h4 {
@@ -1192,19 +1192,19 @@ body {
   font-weight: 800;
   display: table-cell;
   vertical-align: middle;
-  padding-right: 20px
+  padding-right: 20px;
 }
 
 .about-us .img .stauts .item h4 span {
   font-size: 30px;
   font-weight: 500;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 .about-us .img .stauts .item h6 {
   font-size: 15px;
   display: table-cell;
-  vertical-align: middle
+  vertical-align: middle;
 }
 .about-us .dull-image {
   width: 100%;
@@ -1213,8 +1213,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .about-us .img {
-    padding: 0
-}
+    padding: 0;
+  }
   .slider .parallax-slider .swiper-slide-active .caption h1 {
     font-size: 30px;
   }
@@ -1273,5 +1273,10 @@ body {
 
   .particles .cont h1 {
     font-size: 55px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-us .img .stauts {
+    display: none;
   }
 }
