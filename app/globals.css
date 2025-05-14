@@ -931,7 +931,92 @@ p {
   margin-bottom: 20px;
 }
 
- 
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+.services.box .item-box {
+  border: 0;
+  border-radius: 15px;
+  background: hsla(0,0%,100%,.01)
+}
+
+.services.box .item-box .icon {
+  font-size: 60px
+}
+
+.services.box .item-box .icon:after {
+  display: none
+}
+
+.services .item-box {
+  padding: 80px 30px;
+  text-align: center;
+  border: 1px solid hsla(0,0%,100%,.05)
+}
+
+.services .item-box .icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  margin-bottom: 30px
+}
+
+.services .item-box .icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(90deg,#12c2e9,#c471ed,#f64f59);
+  z-index: -1;
+  opacity: .05
+}
+
+.services .item-box h6 {
+  line-height: 1.8;
+  text-transform: capitalize;
+  margin-bottom: 10px
+}
+
+.services .rone>div {
+  position: relative
+}
+
+.svgContainer {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.svgContainer svg {
+  width: 80px !important;
+}
+
+.svgContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+  z-index: -1; /* Place behind the SVG */
+  opacity: 0.05; /* Adjust for a subtle effect */
+}
 
 /* ====================== [ Start progress-wrap ] ====================== */
 .progress-wrap {
