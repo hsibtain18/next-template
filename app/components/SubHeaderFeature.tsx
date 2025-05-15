@@ -18,17 +18,25 @@ const SubHeaderFeature = () => {
     setNavFill(theme !== "dark" ? "#000000" : "#ffffff");
   }, [theme]);
 
-  useGSAP(() => {
-    gsap.from([box1.current, box2.current, box3.current], {
-      x: 200,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.3,
-      ease: "power2.inOut",
-    });
-  }, []);
+  useGSAP(
+    () => {
+      gsap.from([box1.current, box2.current, box3.current], {
+        scrollTrigger: {
+          trigger: box1.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 5,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+    },
+    { scope: box1 } // Optional, but you can also wrap all three refs in a common parent and scope to that
+  );
   return (
-    <section className="container my-20 px-3 max-h-screen mx-auto">
+    <section className="container my-20 px-3  mx-auto">
       <div className="w-full">
         <div className="sec-head text-center">
           <h3 className="wow color-font">
@@ -38,7 +46,11 @@ const SubHeaderFeature = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6  mx-auto">
-        <div className="  flex flex-col items-center text-center my-10 " ref={box1} data-wow-delay=".3s">
+        <div
+          className="  flex flex-col items-center text-center my-10 "
+          ref={box1}
+          data-wow-delay=".3s"
+        >
           <div className="item-box md-mb50 cont text-center">
             <div className="svgContainer">
               <svg
@@ -65,7 +77,11 @@ const SubHeaderFeature = () => {
             </div>
           </div>
         </div>
-        <div className="  flex flex-col items-center text-center my-10 " ref={box2} data-wow-delay=".3s">
+        <div
+          className="  flex flex-col items-center text-center my-10 "
+          ref={box2}
+          data-wow-delay=".3s"
+        >
           <div className="item-box md-mb50 cont  text-center">
             <div className="svgContainer">
               <svg
@@ -95,7 +111,11 @@ const SubHeaderFeature = () => {
             </div>
           </div>
         </div>
-        <div className="  flex flex-col items-center text-center my-10 " ref={box3} data-wow-delay=".3s">
+        <div
+          className="  flex flex-col items-center text-center my-10 "
+          ref={box3}
+          data-wow-delay=".3s"
+        >
           <div className="item-box md-mb50 cont  text-center">
             <div className="svgContainer">
               <svg
