@@ -1,5 +1,4 @@
 import AboutUs from "./components/Aboutus";
-import Counter from "./components/Counter";
 import LandingSwiper from "./components/LandingSwiper";
 import ParticlesComponent from "./components/Particles";
 import SubHeaderFeature from "./components/SubHeaderFeature";
@@ -22,7 +21,6 @@ export default function Home() {
       <section className="flex flex-col gap-10">
         <AboutUs />
         <SubHeaderFeature />
-        <Counter />
         <TestimonialSub />
         <TestimonialCarousel/>
       </section>

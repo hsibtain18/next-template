@@ -3,6 +3,9 @@ import { useGSAP } from "@gsap/react";
 import { useTheme } from "next-themes";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const SubHeaderFeature = () => {
   const { theme } = useTheme();
   const box1 = useRef(null);
