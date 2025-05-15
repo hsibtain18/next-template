@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 shadow-md transition ${navClasses}`}
+      className={`fixed top-0 w-full z-50 shadow-md transition ${navClasses || ''}`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center text-[12px]">
         {/* Logo */}

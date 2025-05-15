@@ -2,7 +2,6 @@
 @import "swiper/css";
 @import "swiper/css/pagination";
 @import "swiper/css/navigation";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -1211,6 +1210,406 @@ body {
   height: auto;
   filter: brightness(90%) contrast(85%);
 }
+
+.sec-head {
+  position: relative;
+  margin: 0 auto 80px;
+}
+
+.sec-head h6 {
+  font-weight: 300;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-bottom: 10px;
+}
+
+.sec-head h3 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.sec-head h2 {
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.work-carousel .swiper-slide {
+  padding: 0 15px
+}
+
+.work-carousel .swiper-slide-active .noraidus .cont {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .5s
+}
+
+.work-carousel .next-ctrl,.work-carousel .prev-ctrl {
+  color: #000;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  border: 0;
+  background: #fff;
+  opacity: 0;
+  transition: all .3s
+}
+
+.work-carousel .next-ctrl:after,.work-carousel .prev-ctrl:after {
+  display: none
+}
+
+.work-carousel .simp-next,.work-carousel .simp-prev {
+  color: #fff;
+  top: auto;
+  bottom: 0
+}
+
+.work-carousel .simp-next:after,.work-carousel .simp-prev:after {
+  display: none
+}
+
+.work-carousel .simp-next {
+  right: 30px
+}
+
+.work-carousel .simp-prev {
+  left: 30px
+}
+
+.work-carousel:hover .next-ctrl,.work-carousel:hover .prev-ctrl {
+  opacity: 1
+}
+
+.work-carousel .content {
+  position: relative
+}
+
+.work-carousel .content .item-img {
+  position: relative;
+  height: 480px;
+  line-height: 0
+}
+
+.work-carousel .content:hover .item-ig {
+  -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+}
+
+.work-carousel .content .cont {
+  position: relative
+}
+
+.work-carousel .content .cont h6 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px
+}
+
+.work-carousel .content .cont h4 {
+  font-size: 17px
+}
+
+.work-carousel .content .cont .icon {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: hsla(0,0%,100%,.03);
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  top: calc(50% - 17px);
+  right: 15px
+}
+
+.work-carousel .content .bgbox {
+  position: absolute;
+  bottom: 35px;
+  left: 35px
+}
+
+.work-carousel.caroul .content .item-img {
+  height: 480px;
+  position: relative
+}
+
+.work-carousel.caroul .content .item-img:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: #18191d;
+  opacity: 0;
+  transition: all .4s
+}
+
+.work-carousel.caroul .content .bgbox {
+  opacity: 0;
+  transition: all .4s
+}
+
+.work-carousel.caroul .content:hover .bgbox,.work-carousel.caroul .content:hover .item-img:after {
+  opacity: 1
+}
+
+.work-carousel .noraidus .item-img {
+  height: 480px;
+  border-radius: 0
+}
+
+.work-carousel .noraidus .cont {
+  position: absolute;
+  padding: 15px !important;
+  background: #111215;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s
+}
+
+.work-carousel .noraidus .cont h6 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px
+}
+
+.work-carousel .noraidus .cont h4 {
+  font-size: 17px
+}
+
+.work-carousel2 .swiper-slide {
+  padding: 0 10px 50px
+}
+
+.work-carousel2 .swiper-slide .img {
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all .8s
+}
+
+.work-carousel2 .swiper-slide-active .img {
+  box-shadow: 0 40px 30px -40px rgba(0,0,0,.3)
+}
+
+.work-carousel2 .swiper-slide-active .img:after {
+  opacity: 1!important
+}
+
+.work-carousel2 .swiper-slide-active .cont h4,.work-carousel2 .swiper-slide-active .cont h6 {
+  opacity: 1!important;
+  visibility: visible!important;
+  transform: translateY(0)!important
+}
+
+.work-carousel2 .swiper-pagination-progressbar {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  left: calc(50% - 120px);
+  width: 240px;
+  height: 2px;
+  border-radius: 10px;
+  background: #eee
+}
+
+.work-carousel2 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  border-radius: 10px;
+  background: #1e1e1e
+}
+
+.work-carousel2 .swiper-button-next,.work-carousel2 .swiper-button-prev {
+  color: #000;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  border: 0;
+  background: #fff;
+  opacity: 0;
+  transition: all .3s
+}
+
+.work-carousel2 .swiper-button-next:after,.work-carousel2 .swiper-button-prev:after {
+  display: none
+}
+
+.work-carousel2:hover .swiper-button-next,.work-carousel2:hover .swiper-button-prev {
+  opacity: 1
+}
+
+.work-carousel2 .content {
+  position: relative
+}
+
+.work-carousel2 .content .img {
+  position: relative;
+  line-height: 0
+}
+
+.work-carousel2 .content .img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,rgba(0,0,0,.7),transparent);
+  opacity: 0;
+  transition: all .5s
+}
+
+.work-carousel2 .content .cont {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #fff
+}
+
+.work-carousel2 .content .cont h6 {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all .7s;
+  transition-delay: .5s
+}
+
+
+.block-sec .vid-area .vid-icon .vid span {
+  font-size: 10px;
+  color: #000
+}
+
+.block-sec .vid-area .text {
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  margin-top: 30px
+}
+
+.block-sec .testim-box {
+  position: relative;
+  padding: 80px 40px;
+  margin-bottom: -120px;
+  z-index: 2
+}
+
+.block-sec .testim-box:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(90deg,#12c2e9,#c471ed,#f64f59);
+  z-index: -4
+}
+
+.block-sec .testim-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #111215;
+  z-index: -1
+}
+
+.block-sec .testim-box .head-box h6 {
+  color: #12c2e9;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px
+}
+
+.block-sec .testim-box .head-box h4 {
+  margin-bottom: 40px
+}
+
+.block-sec .testim-box .item p {
+  font-size: 17px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0,0,0,.05)
+}
+
+.block-sec .testim-box .item .info .img {
+  display: table-cell;
+  vertical-align: middle
+}
+
+.block-sec .testim-box .item .info .img .img-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.block-sec .testim-box .item .info .cont {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px
+}
+
+.block-sec .testim-box .item .info .cont .author-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase
+}
+
+.block-sec .testim-box .item .info .cont .author-details {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase
+}
+
+.block-sec .testim-box .slick-dots {
+  text-align: right
+}
+
+.block-sec .testim-box .slick-dots li {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid #12c2e9
+}
+
+.block-sec .testim-box .slick-dots li.slick-active {
+  background: #12c2e9
+}
+
+.block-sec .testim-box .slick-dots li button {
+  display: none
+}
+
+
+
+
+
+
+
+/* responsive */
 @media screen and (max-width: 767px) {
   .about-us .img {
     padding: 0;
@@ -1275,8 +1674,25 @@ body {
     font-size: 55px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .about-us .img .stauts {
     display: none;
   }
+  .sec-head h3 {
+    font-size: 20px;
+  }
+
+  .sec-head h2 {
+    font-size: 55px;
+  }
+  .block-sec .testim-box {
+    height: 650px !important;
+  }
+  .work-carousel .swiper-slide-active .cont {
+    min-width: 200px !important;
+  }
+}
+.block-sec .testim-box {
+  margin-bottom: 0px !important;
+  height: 500px !important;
 }
