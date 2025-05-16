@@ -5,6 +5,7 @@ import ParticlesComponent from "./components/Particles";
 import SubHeaderFeature from "./components/SubHeaderFeature";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import TestimonialSub from "./components/TestimonialSub";
+import ClientTestimonials from "./components/TestimonialVideo";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <TestimonialSub />
         <TestimonialCarousel/>
         <FunFacts/>
+        <ClientTestimonials/>
       </section>
     </div>
   );
