@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const ClientTestimonials = () => {
@@ -20,6 +20,9 @@ const ClientTestimonials = () => {
   const toggleVideo = () => {
     setVideoIsOpen(!videoIsOpen);
   };
+  useEffect(()=>{
+    toggleVideo();
+  })
 
   return (
     <section className="block-sec VideoTestimonial">
