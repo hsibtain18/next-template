@@ -1,4 +1,5 @@
 import AboutUs from "./components/Aboutus";
+import FunFacts from "./components/FunFacts";
 import LandingSwiper from "./components/LandingSwiper";
 import ParticlesComponent from "./components/Particles";
 import SubHeaderFeature from "./components/SubHeaderFeature";
@@ -23,6 +24,7 @@ export default function Home() {
         <SubHeaderFeature />
         <TestimonialSub />
         <TestimonialCarousel/>
+        <FunFacts/>
       </section>
     </div>
   );
