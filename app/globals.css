@@ -1819,7 +1819,7 @@ video {
 }
 .work-carousel .block-sec .testim-box {
   /* margin-bottom: 0px; */
-  height: 550px !important;
+  height: 550px ;
 }
 [data-overlay-dark],[data-overlay-light] {
   position: relative;
