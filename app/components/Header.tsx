@@ -24,7 +24,7 @@ export default function Navbar() {
     theme === "light" ? "  text-black" : " text-white";
 
   return (
-    <nav
+    <nav suppressHydrationWarning={true}
       className={`fixed top-0 w-full z-50 shadow-md transition ${navClasses || ''}`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center text-[12px]">

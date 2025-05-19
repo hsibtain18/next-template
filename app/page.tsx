@@ -1,4 +1,7 @@
+'use client'
 import AboutUs from "./components/Aboutus";
+import CallToAction from "./components/CallToAction";
+import ClientsSection from "./components/ClientsData";
 import FunFacts from "./components/FunFacts";
 import LandingSwiper from "./components/LandingSwiper";
 import ParticlesComponent from "./components/Particles";
@@ -11,7 +14,7 @@ export default function Home() {
   return (
     <div className=" font-[family-name:var(--font-poppins)]">
       {/* Landing Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Particles + Gradient */}
         <ParticlesComponent />
 
@@ -24,9 +27,11 @@ export default function Home() {
         <AboutUs />
         <SubHeaderFeature />
         <TestimonialSub />
-        <TestimonialCarousel/>
-        <FunFacts/>
-        <ClientTestimonials/>
+        <TestimonialCarousel />
+        <FunFacts />
+        <ClientTestimonials />
+        <ClientsSection />
+        <CallToAction/>
       </section>
     </div>
   );

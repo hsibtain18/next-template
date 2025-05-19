@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "../public/css/dark.css";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import { Poppins } from "next/font/google";
 import ScrollToTopButton from "./components/CursorToTop";
 import MouseCursor from "./components/MouseCursor";
 import MobileFooter from "./components/MobileFooter";
+import Footer from "./components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,7 +35,8 @@ export default function RootLayout({
           <ScrollToTopButton />
           <MouseCursor />
           {children}
-          <MobileFooter/>
+          <MobileFooter />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

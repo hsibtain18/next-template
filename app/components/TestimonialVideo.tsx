@@ -22,7 +22,7 @@ const ClientTestimonials = () => {
   };
   useEffect(()=>{
     toggleVideo();
-  })
+  },[])
 
   return (
     <section className="block-sec VideoTestimonial">
