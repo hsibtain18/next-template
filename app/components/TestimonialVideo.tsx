@@ -20,24 +20,22 @@ const ClientTestimonials = () => {
   const toggleVideo = () => {
     setVideoIsOpen(!videoIsOpen);
   };
-  useEffect(()=>{
+  useEffect(() => {
     toggleVideo();
-  },[])
+  }, []);
 
   return (
     <section className="block-sec VideoTestimonial">
       <div
-        className="background bg-img pt-[100px] pb-0 parallaxie"
+        className="background bg-img pt-100 pb-0 parallaxie"
         style={{ backgroundImage: `url('/bg-vid.webp')` }}
         data-overlay-dark="5"
       >
-         <div className="absolute inset-0 bg-black/50 z-0"></div>
+        {/* <div className="absolute inset-0 bg-black/50 z-0"></div> */}
         <div className="container mx-auto">
-          <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/2">
-              {/* Placeholder for future content */}
-            </div>
-            <div className="w-full lg:w-5/12 lg:ml-auto">
+          <div className="row">
+            <div className="col-lg-6"></div>
+            <div className="col-lg-5 offset-lg-1">
               <div className="testim-box">
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".3s">
@@ -62,8 +60,7 @@ const ClientTestimonials = () => {
                               src={item.avatar}
                               alt="Client avatar"
                               width={100}
-                              height={100}
-                              loading="lazy"
+                              height={100} 
                               className="rounded-circle"
                             />
                           </div>

@@ -61,8 +61,7 @@ const ClientsSection = () => {
                             src={theme === 'light' ? item.lightImage : item.darkImage}
                             alt="client image"
                             width={100}
-                            height={50}
-                            loading="lazy"
+                            height={50} 
                           />
                         </div>
                       </div>

@@ -1152,7 +1152,7 @@ body {
   right: 0;
   width: 400px;
   height: 400px;
-  background-image: url(/img/dots.png);
+  background-image: url(//dots.png);
   background-repeat: repeat;
   opacity: 0.3;
   z-index: -1;
@@ -1818,8 +1818,8 @@ video {
   }
 }
 .work-carousel .block-sec .testim-box {
-  margin-bottom: 0px !important;
-  height: 500px !important;
+  /* margin-bottom: 0px; */
+  height: 550px !important;
 }
 [data-overlay-dark],[data-overlay-light] {
   position: relative;

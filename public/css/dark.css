@@ -23757,7 +23757,7 @@ a:hover,span:hover {
     right: 0;
     width: 400px;
     height: 400px;
-    background-image: url(/img/dots.png);
+    background-image: url(/dots.png);
     background-repeat: repeat;
     opacity: .3;
     z-index: -1

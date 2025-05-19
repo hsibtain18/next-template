@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AlignJustify, Moon, Sun, X } from "@deemlol/next-icons";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -9,9 +9,11 @@ import { useTheme } from "next-themes";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-
+  const [mounted, setMounted] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  useEffect(() => {
+    setMounted(true); // ensures theme is loaded
+  }, []);
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
@@ -22,6 +24,7 @@ export default function Navbar() {
 
   const navClasses =
     theme === "light" ? "  text-black" : " text-white";
+    if (!mounted) return null; // or a loading skeleton/spinner
 
   return (
     <nav suppressHydrationWarning={true}
