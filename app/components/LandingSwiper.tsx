@@ -62,7 +62,7 @@ export default function LandingSwiper() {
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
-              <div className="sm:px-5 text-2xl flex items-center justify-center h-screen w-full   ">
+              <div className="sm:px-5 text-2xl flex items-center justify-center  w-full   ">
                 <div className="caption lg:w-1/2 sm:w-full">
                   <h1 className="color-font">{item.title}</h1>
                   <p className="mb-20">{item.content}</p>
