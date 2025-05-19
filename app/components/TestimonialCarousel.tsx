@@ -10,7 +10,7 @@ import StarsDisplay from './starsDisplay';
 
 const TestimonialCarousel = () => {
   const swiperOptions = {
-    modules: [Navigation],
+    modules: [Navigation,Autoplay],
     slidesPerView: 2,
     centeredSlides: true,
     loop: true,
