@@ -1246,7 +1246,7 @@ body {
 }
 
 .work-carousel .swiper {
-  overflow: visible !important;
+  overflow-y: visible !important;
 }
 
 .work-carousel .swiper-slide-active .noraidus .cont {

@@ -54,7 +54,7 @@ export default function LandingSwiper() {
   return (
     <header className="slider slider-prlx relative fisxed-slider w-full  overflow-hidden text-center"  style={{ height: '100vh' }}>
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <div className="w-full h-full">
+      <div className="w-full h-full hidden">
         <ParticlesComponent />
       </div>
     </div>
