@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, Parallax } from "swiper/modules";
+import { Navigation, Pagination,    Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
 // import { useTheme } from "next-themes";
@@ -9,9 +9,24 @@ import { SocialIcon } from "react-social-icons/component";
 import "react-social-icons/facebook";
 import "react-social-icons/linkedin";
 import "react-social-icons/instagram";
+import ParticlesComponent from "./Particles";
+import { useEffect } from "react";
+import fadeWhenScroll from '@/app/common/fadeWhenScroll'
+import removeSlashFromBagination from '@/app/common/removeSlashpagination'
 export default function LandingSwiper() {
   //   const { theme } = useTheme();
-
+  useEffect(() => {
+    const handle = setTimeout(() => {
+      try {
+        fadeWhenScroll(document.querySelectorAll(".fixed-slider .caption"));
+        removeSlashFromBagination();
+      } catch (err) {
+        console.error("Error in custom scripts", err);
+      }
+    }, 1500);
+  
+    return () => clearTimeout(handle);
+  }, []);
   const introData = [
     {
       id: 1,
@@ -37,10 +52,15 @@ export default function LandingSwiper() {
   ];
 
   return (
-    <header className="slider slider-prlx relative w-full h-full   text-center">
+    <header className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center"  style={{ height: '100vh' }}>
+    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div className="w-full h-full">
+        <ParticlesComponent />
+      </div>
+    </div>
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination, Autoplay]}
+          modules={[Parallax, Navigation, Pagination]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -58,12 +78,12 @@ export default function LandingSwiper() {
             type: "fraction",
             el: ".swiper-pagination",
           }}
-          className="min-h-screen  swiper-wrapper"
+          className="  swiper-wrapper"
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
-              <div className="sm:px-5 text-2xl flex items-center justify-center  w-full   ">
-                <div className="caption lg:w-1/2 sm:w-full">
+              <div  data-overlay-dark="6" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
+                <div className="caption center lg:w-1/2 sm:w-full">
                   <h1 className="color-font">{item.title}</h1>
                   <p className="mb-20">{item.content}</p>
                   <Link href={item.route} className="butn bord curve mt-[50px]">

@@ -1,16 +1,15 @@
-'use client'; // If you're using this in app directory (Next.js 13+)
+"use client"; // If you're using this in app directory (Next.js 13+)
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { workJSON } from '../common/Constant';
-import StarsDisplay from './starsDisplay';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { workJSON } from "../common/Constant";
+import StarsDisplay from "./starsDisplay";
 
 const TestimonialCarousel = () => {
   const swiperOptions = {
-    modules: [Navigation,Autoplay],
+    modules: [Navigation],
     slidesPerView: 2,
     centeredSlides: true,
     loop: true,
@@ -35,35 +34,39 @@ const TestimonialCarousel = () => {
       },
       991: {
         slidesPerView: 2,
+        
       },
+      
     },
   };
 
   return (
     <section className="work-carousel metro position-re">
-      <div className="container-fluid">
+      <div className="container-fluid overflow-visible">
         <div className="row">
           <div className="col-lg-12 no-padding">
-            <Swiper {...swiperOptions} className="swiper-wrapper">
-              {workJSON.map((slide) => (
-                <SwiperSlide key={slide.id} className="swiper-slide">
-                  <div className="block-sec p-3 content">
-                    <div className="testim-box">
-                      <div className="head-box">
-                        <h6>Our Clients</h6>
-                        <h4>What Client&apos;s Say?</h4>
-                      </div>
-                      <p>{slide.testimonial}</p>
-                      <div className="cont">
-                        <StarsDisplay rating={slide.rating} maxStars={5} />
-                        <h6 className="color-font">{slide.position}</h6>
-                        <h4>{slide.name}</h4>
+            <div className="swiper-container">
+              <Swiper {...swiperOptions} className="swiper-wrapper overflow-visible">
+                {workJSON.map((slide) => (
+                  <SwiperSlide key={slide.id} className="swiper-slide">
+                    <div className="block-sec p-3  content wow noraidus fadeInUp">
+                      <div className="testim-box border border-red-500">
+                        <div className="head-box">
+                          <h6>Our Clients</h6>
+                          <h4>What Client&apos;s Say?</h4>
+                        </div>
+                        <p>{slide.testimonial}</p>
+                        <div className="cont">
+                          <StarsDisplay rating={slide.rating} maxStars={5} />
+                          <h6 className="color-font">{slide.position}</h6>
+                          <h4>{slide.name}</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>

@@ -70,10 +70,14 @@ body {
 
 .Nav-btn-light {
   color: #000 !important;
+  display: flex !important;
+  justify-content: end;
 }
 
 .Nav-btn-dark {
   color: #ffffff !important;
+  display: flex !important;
+  justify-content: end;
 }
 
 .slider {
@@ -92,7 +96,7 @@ body {
 }
 
 .slider .parallax-slider {
-  /* position: relative; */
+  position: relative;
 }
 
 .slider .parallax-slider .swiper-slide {
@@ -1170,7 +1174,7 @@ body {
   background: #272727;
   margin-right: 50px;
   position: relative;
-  width: 250px;
+  width: 260px;
 }
 
 .about-us .img .stauts .item:after {
@@ -1187,7 +1191,7 @@ body {
   background: #fff;
   color: #121a21;
 }
-
+ 
 .about-us .img .stauts .item h4 {
   font-size: 45px;
   font-weight: 800;
@@ -1239,6 +1243,10 @@ body {
 
 .work-carousel .swiper-slide {
   padding: 0 15px;
+}
+
+.work-carousel .swiper {
+  overflow: visible !important;
 }
 
 .work-carousel .swiper-slide-active .noraidus .cont {
