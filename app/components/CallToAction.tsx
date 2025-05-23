@@ -5,9 +5,6 @@ const CallToAction = () => {
   return (
     <section
       className="call-action section-padding sub-bg bg-img"
-      style={{
-        background: "/patrn.svg",
-      }}
     >
       <div className="container">
         <div className="row">

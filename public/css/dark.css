@@ -41,11 +41,14 @@
   --foreground: #171717;
   --color-value: #000000;
   --color-border-value: #ffffff;
+  --sub-bg-background : #f5f5f5 
 }
 .dark {
   --color-value: #ffffff;
   --color-border-value: #1b1d21;
   --background-color: #1b1d21;
+  --sub-bg-background : #1b1d21
+
 }
 *,
 :after,
@@ -22068,7 +22071,7 @@ html {
 
 body {
   color:var(--color-value) !important;
-  background: #111215;
+  background: var(--background-color) !important;
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden !important;
@@ -22248,7 +22251,7 @@ span:hover {
 }
 
 .sub-bg {
-  background: #18191d;
+  background: var(--sub-bg-background) !important;
 }
 
 .bg-img {
@@ -26291,8 +26294,7 @@ span:hover {
   top: 0;
   right: 120px;
   bottom: 0;
-  left: -300px;
-  background: #18191d;
+  left: -300px; 
   z-index: -1;
 }
 

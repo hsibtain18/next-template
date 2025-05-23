@@ -1914,3 +1914,39 @@ video {
 [data-overlay-dark="10"]:before,[data-overlay-light="10"]:before {
   opacity: 1
 }
+.testimonial .block-sec .testim-box {
+  margin-bottom: 0px !important;
+  height: 625px !important;
+  padding: 50px !important;
+}
+
+.testimonial .block-sec:nth-child(odd) .testim-box:after {
+  background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9) !important;
+  /* Reverse the gradient */
+}
+
+.testimonial .block-sec .testim-box-light:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: white !important;
+  z-index: -1;
+}
+
+.testimonial .bottom-fixed {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: max-content;
+}
+
+.light {
+  color: black !important;
+}

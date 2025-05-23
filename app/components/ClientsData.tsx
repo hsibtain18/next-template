@@ -9,7 +9,9 @@ const ClientsSection = () => {
 
   const firstHalf = clientsData.slice(0, clientsData.length / 2);
   const secondHalf = clientsData.slice(4);
- 
+ if(!theme){
+  return
+ }
 
   return (
     <section className="clients section-padding">
