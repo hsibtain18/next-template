@@ -224,7 +224,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-blue-500 nav-link">
               Home
             </Link>
-            <Link href="/about" className="hover:text-blue-500 nav-link">
+            <Link href="/aboutus" className="hover:text-blue-500 nav-link">
               About
             </Link>
 

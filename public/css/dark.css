@@ -24853,6 +24853,10 @@ span:hover {
   position: relative;
 }
 
+.pages-header .cont {
+  margin-top: 150px !important;
+  margin-bottom: 150px !important;
+}
 .pages-header .cont h1 {
   font-size: 55px;
 }
@@ -28845,6 +28849,7 @@ span:hover {
 
 .call-action {
   background-attachment: fixed;
+  background-image: url(/patrn.svg);
 }
 
 .call-action .content h6 {
