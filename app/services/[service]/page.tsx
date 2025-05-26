@@ -5,19 +5,14 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 const validServices = ["aam", "ppc", "bm", "testimonials"];
-type Props = {
-    params: {
-      service: string;
-    };
-  };
-export const generateStaticParams = async () => {
-  return validServices.map((service) => ({ service }));
-};
- 
 
-const ServicePage = ({ params }: Props) => {
-    const { service } = params;
-  
+const ServicePage = async ({
+  params,
+}: {
+  params: Promise<{ service: string }>;
+}) => {
+  const { service } = await params;
+
   if (!validServices.includes(service)) {
     notFound();
   }
@@ -27,7 +22,7 @@ const ServicePage = ({ params }: Props) => {
       <WorksHeader url={service} />
       <div className="main-content">
         <MiddleSectionService url={service} />
-        <Footer/>
+        <Footer />
       </div>
     </section>
   );
