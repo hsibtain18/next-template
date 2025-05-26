@@ -168,19 +168,33 @@
 
 //   );
 // }
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Sun, Moon, AlignJustify, X, ArrowRight } from "@deemlol/next-icons";
 import { useTheme } from "next-themes";
-
+import gsap from "gsap";
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navClasses, setNavClasses] = useState("");
   const [hasMounted, setHasMounted] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+
   const toggleTheme = () => {
+    if (buttonRef.current) {
+      gsap.fromTo(
+        buttonRef.current,
+        { rotate: 0 },
+        {
+          rotate: 360,
+          duration: 0.6,
+          ease: "back.inOut(1.7)", // adds elastic bounce like a dial
+        }
+      );
+    }
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
   useEffect(() => {
@@ -293,7 +307,7 @@ const Navbar = () => {
               <button className="lg:hidden text-xl" onClick={toggleMenu}>
                 {menuOpen ? <X /> : <AlignJustify />}
               </button>
-              <button onClick={toggleTheme} className="ml-2">
+              <button ref={buttonRef} onClick={toggleTheme} className="ml-2">
                 {theme === "light" ? <Sun /> : <Moon />}
               </button>
 
