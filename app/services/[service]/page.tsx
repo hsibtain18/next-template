@@ -5,13 +5,17 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 const validServices = ["aam", "ppc", "bm", "testimonials"];
-
+type Props = {
+    params: {
+      service: string;
+    };
+  };
 export const generateStaticParams = async () => {
   return validServices.map((service) => ({ service }));
 };
  
 
-const ServicePage = ({ params }: { params: { service: string } }) => {
+const ServicePage = ({ params }: Props) => {
     const { service } = params;
   
   if (!validServices.includes(service)) {
