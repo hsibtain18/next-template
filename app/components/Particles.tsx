@@ -69,6 +69,7 @@ const ParticlesComponent = () => {
         size: { value: { min: 0.5, max: 4 } },
       },
       detectRetina: true,
+      fullScreen: false
     };
   }, [resolvedTheme]);
 
@@ -78,7 +79,7 @@ const ParticlesComponent = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className="w-full h-full hidden"
+        className="particles-overlay "
       />
     );
   }

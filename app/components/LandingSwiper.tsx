@@ -53,11 +53,7 @@ export default function LandingSwiper() {
 
   return (
     <header className="slider slider-prlx relative fisxed-slider w-full  overflow-hidden text-center"  style={{ height: '100vh' }}>
-    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <div className="w-full h-full hidden">
         <ParticlesComponent />
-      </div>
-    </div>
       <div className="swiper-container parallax-slider">
         <Swiper
           modules={[Parallax, Navigation, Pagination]}
@@ -82,7 +78,7 @@ export default function LandingSwiper() {
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
-              <div  data-overlay-dark="6" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
+              <div  data-overlay-dark="2" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
                 <div className="caption center lg:w-1/2 sm:w-full">
                   <h1 className="color-font">{item.title}</h1>
                   <p className="mb-20">{item.content}</p>

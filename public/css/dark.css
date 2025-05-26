@@ -25044,7 +25044,7 @@ span:hover {
 }
 
 .main-content {
-  background: #111215;
+  background: var(--background-color) !important;
   position: relative;
   z-index: 3;
   overflow-x: hidden !important;

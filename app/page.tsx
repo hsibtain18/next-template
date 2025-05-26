@@ -10,8 +10,7 @@ import SubHeaderFeature from "./components/SubHeaderFeature";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import TestimonialSub from "./components/TestimonialSub";
 import ClientTestimonials from "./components/TestimonialVideo";
-// import LoadingScreen from "./components/Loading";
-import FullScreenLoader from "./components/Loading";
+ 
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -31,7 +30,7 @@ export default function Home() {
         <LandingSwiper />{" "}
         {/*  this div is getting in the background and below div is getting over this div   */}
       </div>
-      <FullScreenLoader />
+      {/* <FullScreenLoader /> */}
       <div className="flex flex-col gap-10" ref={mainContentRef}>
         <AboutUs />
         <SubHeaderFeature />
