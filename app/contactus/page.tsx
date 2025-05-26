@@ -13,9 +13,11 @@ const ContactUs = () => {
       <div className="main-content">
         <ContactSection />
         <ClientTestimonials />
-        <ClientsSection />
-        <CallToAction />
-        <Footer/>
+        <ClientsSection /> 
+        <div className="flex flex-col gap-0">
+          <CallToAction />
+          <Footer />
+        </div>
       </div>
     </section>
   );

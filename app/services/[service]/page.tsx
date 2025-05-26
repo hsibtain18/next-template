@@ -1,5 +1,8 @@
+import CallToAction from "@/app/components/CallToAction";
+import ClientsSection from "@/app/components/ClientsData";
 import Footer from "@/app/components/Footer";
 import MiddleSectionService from "@/app/components/MiddleSectionService";
+import ClientTestimonials from "@/app/components/TestimonialVideo";
 import WorksHeader from "@/app/components/WorkHeader";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -26,7 +29,12 @@ const ServicePage = async ({
       <WorksHeader url={service} />
       <div className="main-content">
         <MiddleSectionService url={service} />
-        <Footer />
+        <ClientTestimonials />
+        <ClientsSection />
+        <div className="flex flex-col gap-0">
+          <CallToAction />
+          <Footer />
+        </div>
       </div>
     </section>
   );

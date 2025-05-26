@@ -20,9 +20,10 @@ const Testimonial = () => {
         <TestimonialsSection />
         <ClientTestimonials />
         <ClientsSection />
-        <CallToAction />
-        <Footer/>
-
+        <div className="flex flex-col gap-0">
+          <CallToAction />
+          <Footer />
+        </div>
       </div>
     </section>
   );

@@ -232,8 +232,7 @@ const Navbar = () => {
             priority
             alt="logo"
           />
-        </Link>
-            {theme}
+        </Link> 
         <div className="flex justify-end gap-4">
           <div className="hidden lg:flex items-center gap-6">
             <Link href="/" className="hover:text-blue-500 nav-link">

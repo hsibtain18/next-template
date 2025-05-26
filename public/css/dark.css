@@ -2451,7 +2451,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
+  color: var(--color-value);
   background-color: #007bff;
   border-color: #007bff;
 }
@@ -22252,6 +22252,9 @@ span:hover {
 
 .sub-bg {
   background: var(--sub-bg-background) !important;
+}
+.sub-bg-footer {
+  background: #000000 !important;
 }
 
 .bg-img {

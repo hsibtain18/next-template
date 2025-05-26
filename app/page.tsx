@@ -1,5 +1,5 @@
 "use client";
-import {   useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import AboutUs from "./components/Aboutus";
 import CallToAction from "./components/CallToAction";
 import ClientsSection from "./components/ClientsData";
@@ -25,16 +25,14 @@ export default function Home() {
     }
   }, []);
 
-
-
   return (
     <div className=" font-[family-name:var(--font-poppins)]">
-      <div ref={fixedSliderRef}> 
+      <div ref={fixedSliderRef}>
         <LandingSwiper />{" "}
         {/*  this div is getting in the background and below div is getting over this div   */}
       </div>
-      <FullScreenLoader/>
-      <div className="flex flex-col gap-10"  ref={mainContentRef}>
+      <FullScreenLoader />
+      <div className="flex flex-col gap-10" ref={mainContentRef}>
         <AboutUs />
         <SubHeaderFeature />
         <TestimonialSub />
@@ -42,9 +40,10 @@ export default function Home() {
         <FunFacts />
         <ClientTestimonials />
         <ClientsSection />
-        <CallToAction />
-        <Footer/>
-
+        <div className="flex flex-col gap-0">
+          <CallToAction />
+          <Footer />
+        </div>
       </div>
     </div>
   );

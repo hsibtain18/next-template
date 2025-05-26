@@ -1,4 +1,5 @@
 "use client";
+import { ArrowRight } from "@deemlol/next-icons";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -123,8 +124,10 @@ const FunFacts = () => {
               <h4 className="wow color-font">
                 Transform Your Amazon Business Today!
               </h4>
-              <Link href="contactRoute" className="btn btn-primary w-[250px] mx-auto">
-                Let’s Get Started <i className=" pl-2 fas fa-arrow-right"></i>
+              <Link href="contactRoute" className={`btn btn-primary  w-[250px] mx-auto ${
+                theme === "light" ? "Nav-btn-light" : "Nav-btn-dark"
+              }`}>
+                Let’s Get Started <ArrowRight className="ml-2 pt-5" size={20} />
               </Link>
             </div>
           </div>
@@ -133,5 +136,7 @@ const FunFacts = () => {
     </section>
   );
 };
+ 
+
 
 export default FunFacts;

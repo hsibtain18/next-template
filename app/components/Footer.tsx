@@ -10,7 +10,7 @@ import { ArrowRight } from "@deemlol/next-icons";
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="sub-bg">
+    <footer className="  sub-bg-footer">
       <div className="row container mx-auto">
         <div className="col-lg-4">
           <div className="item md-mb50">
