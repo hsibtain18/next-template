@@ -23235,22 +23235,17 @@ span:hover {
 }
 
 .progress-wrap:after {
-  position: absolute;
-  font-family: Font Awesome\5 Free;
-  content: "\f077";
-  text-align: center;
-  line-height: 44px;
-  font-size: 13px;
-  font-weight: 900;
   color: #12c2e9;
-  left: 0;
-  top: 0;
-  height: 44px;
-  width: 44px;
-  cursor: pointer;
-  display: block;
-  z-index: 1;
-  transition: all 0.4s linear;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .progress-wrap svg path {
