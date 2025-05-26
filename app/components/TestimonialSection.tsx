@@ -4,13 +4,19 @@
 import { useTheme } from "next-themes";
 import { testimonialSection } from "../common/Constant";
 import StarDisplay from "./starsDisplay";
+import { useEffect, useState } from "react";
  
 
 export default function TestimonialsSection() {
-  const { theme } = useTheme();
-if(!theme){
-    return
-}
+    const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(() => {
+      setMounted(true); // wait until client renders
+    }, []);
+  
+    if (!mounted) return null; // prevent hydration mismatch
+  
   return (
     <section  className="testimonials section-padding position-re">
       <div className="container">

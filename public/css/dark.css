@@ -27142,7 +27142,7 @@ span:hover {
 .work-carousel .noraidus .cont {
   position: absolute;
   padding: 15px !important;
-  background: #111215;
+  background: var(--background-color) !important;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -27295,7 +27295,20 @@ span:hover {
 .work-carousel2.mcolumn .swiper-slide-active .img:after {
   opacity: 1 !important;
 }
+.star-display {
+  display: flex;
+  gap: 5px;
+  font-size: 24px;
+  justify-content: center;
+}
 
+.star {
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffc107; /* Gold color for filled stars */
+}
 .case-study {
   position: relative;
 }
