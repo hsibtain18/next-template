@@ -272,8 +272,11 @@ const Navbar = () => {
             <Link href="/testimonials" className="hover:text-blue-500 nav-link">
               Testimonials
             </Link>
-            <Link href="/contact" className="hover:text-blue-500 nav-link">
+            <Link href="/contactus" className="hover:text-blue-500 nav-link">
               Contact
+            </Link>
+            <Link href="/services/bm" className="hover:text-blue-500 nav-link">
+              Contactsac
             </Link>
             <Link
               href="/calender"

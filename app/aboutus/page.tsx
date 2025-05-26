@@ -6,6 +6,7 @@ import SubHeaderFeature from "../components/SubHeaderFeature";
 import ClientTestimonials from "../components/TestimonialVideo";
 import ClientsSection from "../components/ClientsData";
 import CallToAction from "../components/CallToAction";
+import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <ClientTestimonials/>
       <ClientsSection/>
       <CallToAction/>
+      <Footer/>
     </section>
   );
 };

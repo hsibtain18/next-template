@@ -12,6 +12,7 @@ import TestimonialSub from "./components/TestimonialSub";
 import ClientTestimonials from "./components/TestimonialVideo";
 // import LoadingScreen from "./components/Loading";
 import FullScreenLoader from "./components/Loading";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const fixedSliderRef = useRef<HTMLDivElement>(null);
@@ -42,6 +43,8 @@ export default function Home() {
         <ClientTestimonials />
         <ClientsSection />
         <CallToAction />
+        <Footer/>
+
       </div>
     </div>
   );

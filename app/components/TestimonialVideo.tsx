@@ -25,7 +25,7 @@ const ClientTestimonials = () => {
   }, []);
 
   return (
-    <section className="block-sec VideoTestimonial">
+    <section className="block-sec VideoTestimonial" suppressHydrationWarning>
       <div
         className="background bg-img pt-100 pb-0 parallaxie"
         style={{ backgroundImage: `url('/bg-vid.webp')` }}

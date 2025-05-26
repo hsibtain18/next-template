@@ -4,6 +4,7 @@ import TestimonialsSection from "../components/TestimonialSection";
 import CallToAction from "../components/CallToAction";
 import ClientsSection from "../components/ClientsData";
 import ClientTestimonials from "../components/TestimonialVideo";
+import Footer from "../components/Footer";
 
 const Testimonial = () => {
   return (
@@ -20,6 +21,8 @@ const Testimonial = () => {
         <ClientTestimonials />
         <ClientsSection />
         <CallToAction />
+        <Footer/>
+
       </div>
     </section>
   );

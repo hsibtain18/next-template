@@ -1950,3 +1950,54 @@ video {
 .light {
   color: black !important;
 }
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.ticker {
+  display: flex;
+}
+
+.ticker-message {
+  padding-right: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Styling based on message type */
+.ticker-message.error {
+  color: red;
+}
+
+.ticker-message.success {
+  color: green;
+}
+.service .card {
+  background-color: transparent !important;
+
+}
+
+.service.card .bg-success,
+.bg-primary {
+  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59) !important;
+}
+
+.service .card .list-group-item {
+  background-color: transparent !important;
+}
+
+.service .dull-image {
+  width: 100%;
+  height: auto;
+}
+.service .brand {
+  filter: brightness(90%) contrast(85%);
+}
+.service .ppc {
+  filter: brightness(95%) contrast(90%);
+}
+.service .aam{
+  filter: brightness(100%) contrast(90%);
+}

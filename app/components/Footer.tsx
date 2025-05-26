@@ -92,7 +92,7 @@ const Footer = () => {
               <Image
                 width="500"
                 height="200"
-                src="./logo-light.png"
+                src="/logo-light.png"
                 alt="logo"
               />
             </div>

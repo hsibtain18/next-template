@@ -7,8 +7,7 @@ import Header from "./components/Header";
 import { Poppins } from "next/font/google";
 import ScrollToTopButton from "./components/CursorToTop";
 import MouseCursor from "./components/MouseCursor";
-import MobileFooter from "./components/MobileFooter";
-import Footer from "./components/Footer";
+import MobileFooter from "./components/MobileFooter"; 
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -35,8 +34,7 @@ export default function RootLayout({
           <ScrollToTopButton />
           <MouseCursor />
           {children}
-          <MobileFooter />
-          <Footer />
+          <MobileFooter /> 
         </ThemeProvider>
       </body>
     </html>
