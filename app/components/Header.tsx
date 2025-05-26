@@ -195,6 +195,7 @@ const Navbar = () => {
         }
       );
     }
+
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
   useEffect(() => {
@@ -232,7 +233,7 @@ const Navbar = () => {
             alt="logo"
           />
         </Link>
-
+            {theme}
         <div className="flex justify-end gap-4">
           <div className="hidden lg:flex items-center gap-6">
             <Link href="/" className="hover:text-blue-500 nav-link">
