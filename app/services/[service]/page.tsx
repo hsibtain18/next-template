@@ -5,7 +5,11 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 const validServices = ["aam", "ppc", "bm", "testimonials"];
-
+export async function generateStaticParams() {
+    return ["aam", "ppc", "bm", "testimonials"].map((service) => ({
+      service,
+    }));
+  }
 const ServicePage = async ({
   params,
 }: {
