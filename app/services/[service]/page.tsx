@@ -9,13 +9,11 @@ const validServices = ["aam", "ppc", "bm", "testimonials"];
 export const generateStaticParams = async () => {
   return validServices.map((service) => ({ service }));
 };
+ 
 
-interface Params {
-  service: string;
-}
-
-const ServicePage =  ({ params }: { params: Params }) => {
-  const { service } = params;
+const ServicePage = ({ params }: { params: { service: string } }) => {
+    const { service } = params;
+  
   if (!validServices.includes(service)) {
     notFound();
   }
