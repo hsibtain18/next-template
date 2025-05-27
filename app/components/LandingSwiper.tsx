@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination,    Parallax } from "swiper/modules";
+import { Autoplay, Navigation, Pagination,    Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
 // import { useTheme } from "next-themes";
@@ -56,7 +56,7 @@ export default function LandingSwiper() {
         <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination]}
+          modules={[Parallax, Navigation, Pagination,Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
