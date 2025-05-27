@@ -1,12 +1,19 @@
 'use client'
-import React  from 'react';
+import React, { useEffect, useState }  from 'react';
 import Image from 'next/image'; 
 import { useTheme } from 'next-themes';
 import { clientsData } from '../common/Constant';
 
 const ClientsSection = () => {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Wait until the theme is available (mounted on client)
+  if (!mounted) return null;
   const firstHalf = clientsData.slice(0, clientsData.length / 2);
   const secondHalf = clientsData.slice(4);
  if(!theme){

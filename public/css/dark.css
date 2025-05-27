@@ -28861,8 +28861,8 @@ span:hover {
 }
 
 .call-action {
-  background-attachment: fixed;
-  background-image: url(/patrn.svg);
+  background-attachment: fixed !important;
+  background-image: url(/patrn.svg) !important;
 }
 
 .call-action .content h6 {

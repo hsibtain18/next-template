@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const SubHeaderFeature = () => {
@@ -70,10 +71,10 @@ const SubHeaderFeature = () => {
                 Optimized PPC campaigns to drive targeted traffic, maximize ROI,
                 and boost sales.
               </p>
-
-              <a className="butn bord curve   mt-auto mx-auto mt-25">
-                Read more
-              </a>
+              <Link href={'/services/ppc'} className="butn bord curve   mt-auto mx-auto mt-25">
+              Read more
+              </Link>
+              
             </div>
           </div>
         </div>
@@ -105,9 +106,9 @@ const SubHeaderFeature = () => {
                 customer trust.
               </p>
 
-              <a className="butn bord curve   mt-auto mx-auto mt-25">
-                Read more
-              </a>
+              <Link href={'/services/bm'} className="butn bord curve   mt-auto mx-auto mt-25">
+              Read more
+              </Link>
             </div>
           </div>
         </div>
@@ -136,9 +137,9 @@ const SubHeaderFeature = () => {
                 and boost sales.
               </p>
 
-              <a className="butn bord curve   mt-auto mx-auto mt-25 ">
-                Read more
-              </a>
+              <Link href={'/services/aam'} className="butn bord curve   mt-auto mx-auto mt-25">
+              Read more
+              </Link>
             </div>
           </div>
         </div>

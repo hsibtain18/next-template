@@ -108,6 +108,7 @@ export default function LandingSwiper() {
             url="www.facebook.com"
             bgColor="transparent"
             href="https://www.facebook.com/share/1DpZghiiTp/?mibextid=wwXIfr"
+            target="_blank"
             style={{
               height: 40,
               width: 40,
@@ -116,6 +117,7 @@ export default function LandingSwiper() {
           <SocialIcon
             url="www.linkedin.com"
             bgColor="transparent"
+            target="_blank"
             style={{
               height: 40,
               width: 40,
@@ -124,6 +126,7 @@ export default function LandingSwiper() {
           <SocialIcon
             url="www.instagram.com"
             bgColor="transparent"
+            target="_blank"
             href="https://www.instagram.com/ectorious.official/"
             style={{
               height: 40,

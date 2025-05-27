@@ -16,7 +16,7 @@ const Testimonial = () => {
         </div>
       </div>
       <WorksHeader />
-      <div className="main-content flex flex-col gap-10">
+      <div className="main-content flex flex-col gap-20 pt-5">
         <TestimonialsSection />
         <ClientTestimonials />
         <ClientsSection />

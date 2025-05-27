@@ -27,7 +27,7 @@ const ServicePage = async ({
   return (
     <section>
       <WorksHeader url={service} />
-      <div className="main-content">
+      <div className="main-content flex flex-col gap-20 pt-5">
         <MiddleSectionService url={service} />
         <ClientTestimonials />
         <ClientsSection />

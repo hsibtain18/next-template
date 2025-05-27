@@ -14,7 +14,7 @@ const FunFacts = () => {
   }, [theme]);
 
   return (
-    <section className="number-sec mx-auto">
+    <section className="number-sec mx-auto fun-section">
       <div className="container">
         <div className="w-full">
           <div className="sec-head text-center">

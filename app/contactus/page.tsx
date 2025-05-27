@@ -10,7 +10,7 @@ const ContactUs = () => {
   return (
     <section>
       <HeaderWithParticles />
-      <div className="main-content">
+      <div className="main-content flex flex-col gap-20 pt-5">
         <ContactSection />
         <ClientTestimonials />
         <ClientsSection /> 

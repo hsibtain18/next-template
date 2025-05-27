@@ -31,7 +31,7 @@ export default function Home() {
         {/*  this div is getting in the background and below div is getting over this div   */}
       </div>
       {/* <FullScreenLoader /> */}
-      <div className="flex flex-col gap-10" ref={mainContentRef}>
+      <div className="flex flex-col gap-20 pt-80" ref={mainContentRef}>
         <AboutUs />
         <SubHeaderFeature />
         <TestimonialSub />

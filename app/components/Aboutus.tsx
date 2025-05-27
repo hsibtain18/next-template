@@ -46,7 +46,7 @@ const AboutUs = () => {
   return (
     <section className="container mx-auto px-4 about-us">
       <div className="flex flex-col md:flex-row gap-4 h-full ">
-        <div className="w-full md:w-1/3 overflow-hidden h-[600px]">
+        <div className="w-full md:w-1/3 overflow-hidden h-[550px]">
           <div className="mb-50">
             <h6 className="fw-100 text-u ls10 mb-10">{aboutData.smallTitle}</h6>
             <h3 className="fw-600 text-u ls1 mb-30 color-font">
