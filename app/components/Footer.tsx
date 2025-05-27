@@ -77,7 +77,7 @@ const Footer = () => {
               </li>
               <li className="d-block">
                 <p className="mb-20">Your Amazon Success Awaits</p>
-                <Link href={""} className="btn btn-primary w-[250px] Nav-btn-dark">
+                <Link href={"/calender"} className="btn btn-primary w-[250px] Nav-btn-dark">
                   Get Started Today{" "}
                   <ArrowRight className="ml-2 pt-5" size={20} />
                 </Link>
