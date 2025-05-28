@@ -78,7 +78,7 @@ export default function LandingSwiper() {
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
-              <div  data-overlay-dark="2" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
+              <div  data-overlay-dark="3" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
                 <div className="caption center lg:w-1/2 sm:w-full">
                   <h1 className="color-font">{item.title}</h1>
                   <p className="mb-20">{item.content}</p>
@@ -91,13 +91,11 @@ export default function LandingSwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="setone setwo">
-          <div className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]">
-            {/* <i className="fas fa-chevron-right"></i> */}
+        <div className="setone setwo"> 
+          <div className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]"> 
             <ChevronRight size={20} />
           </div>
-          <div className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
-            {/* <i className="fas fa-chevron-left"></i> */}
+          <div className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer  text-[var(----color-value)]"> 
             <ChevronLeft size={20} />
           </div>
         </div>

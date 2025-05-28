@@ -50,7 +50,7 @@ const TestimonialCarousel = () => {
                 {workJSON.map((slide) => (
                   <SwiperSlide key={slide.id} className="swiper-slide">
                     <div className="block-sec p-3  content wow noraidus fadeInUp">
-                      <div className="testim-box border border-red-500">
+                      <div className="testim-box ">
                         <div className="head-box">
                           <h6>Our Clients</h6>
                           <h4>What Client&apos;s Say?</h4>

@@ -46,7 +46,7 @@
 .dark {
   --color-value: #ffffff;
   --color-border-value: #1b1d21;
-  --background-color: #1b1d21;
+  --background-color: #111215;
   --sub-bg-background : #1b1d21
 
 }
@@ -28030,8 +28030,7 @@ span:hover {
 
 .block-sec .testim-box {
   position: relative;
-  padding: 80px 40px;
-  margin-bottom: -120px;
+  padding: 80px 40px; 
   z-index: 2;
 }
 

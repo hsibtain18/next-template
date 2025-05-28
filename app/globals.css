@@ -398,6 +398,19 @@ body {
   font-size: 13px;
 }
 
+.social-icon-a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 13px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-image: initial;
+}
 .slider-st {
   min-height: 100vh;
   padding: 120px 0;
@@ -1256,11 +1269,7 @@ body {
 .work-carousel .swiper-slide {
   padding: 0 15px;
 }
-
-.work-carousel .swiper {
-  overflow-y: visible !important;
-}
-
+ 
 .work-carousel .swiper-slide-active .noraidus .cont {
   opacity: 1;
   visibility: visible;

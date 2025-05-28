@@ -1,35 +1,61 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { SplitText } from "gsap/SplitText"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 // import Image from "next/image";
 import CountUp from "react-countup";
 import Link from "next/link";
-gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin,SplitText);
 const AboutUs = () => {
   const textRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (textRef.current) {
-      gsap.to(textRef.current, {
-        duration: 15,
-        scrambleText: {
-          text: aboutData.content,
-          chars: "upperCase",
-        },
-        ease: "power2.inOut",
+  // useGSAP(() => {
+  //   if (textRef.current) {
+  //     gsap.to(textRef.current, {
+  //       duration: 15,
+  //       scrambleText: {
+  //         text: aboutData.content,
+  //         chars: "upperCase",
+  //       },
+  //       ease: "power2.inOut",
+  //       scrollTrigger: {
+  //         trigger: textRef.current,
+  //         start: "top 80%", // when top of element hits 80% of viewport
+  //         toggleActions: "play none none none",
+  //         once: true, // only once
+  //       },
+  //     });
+  //   }
+  // }, []);
+  useEffect(() => {
+    const animateText = async () => {
+      if (!textRef.current) return;
+      const { default: SplitText } = await import('gsap/SplitText');
+      gsap.registerPlugin(SplitText, ScrollTrigger);
+      const split = new SplitText(textRef.current, {
+        type: 'chars',
+      });
+      gsap.from(split.chars, {
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 80%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none",
-          once: true, // only once
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+          once: true,
         },
+        opacity: 0,
+        y: 20,
+        stagger: 0.03,
+        duration: 0.6,
+        ease: 'power2.out',
       });
-    }
+    };
+
+    animateText();
   }, []);
   const aboutData = {
     id: 1,
@@ -54,7 +80,7 @@ const AboutUs = () => {
             </h3>
             {/* <p>{aboutData.content}</p> */}
             <p className=" mt-10 h-[250px]" ref={textRef}>
-              {/* Loading... */}
+              {aboutData.content}
             </p>
          
             <Link  href={'/aboutus'} className="butn bord curve mt-30"><span>Read More</span></Link>  

@@ -124,7 +124,7 @@ const FunFacts = () => {
               <h4 className="wow color-font">
                 Transform Your Amazon Business Today!
               </h4>
-              <Link href="contactRoute" className={`btn btn-primary  w-[250px] mx-auto ${
+              <Link href={'/contactus'} className={`btn btn-primary  w-[250px] mx-auto ${
                 theme === "light" ? "Nav-btn-light" : "Nav-btn-dark"
               }`}>
                 Let’s Get Started <ArrowRight className="ml-2 pt-5" size={20} />

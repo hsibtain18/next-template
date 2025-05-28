@@ -99,29 +99,36 @@ const Footer = () => {
             <div className="social-icon">
               <SocialIcon
                 url="www.facebook.com"
+                target="_blank"
                 bgColor="transparent"
                 href="https://www.facebook.com/share/1DpZghiiTp/?mibextid=wwXIfr"
                 style={{
                   height: 40,
                   width: 40,
                 }}
+                className="social-icon-a"
               />
               <SocialIcon
                 url="www.linkedin.com"
                 bgColor="transparent"
+                href="https://www.linkedin.com/company/ectorious/"
+                target="_blank"
                 style={{
                   height: 40,
                   width: 40,
                 }}
+                className="social-icon-a"
               />
               <SocialIcon
                 url="www.instagram.com"
+                target="_blank"
                 bgColor="transparent"
                 href="https://www.instagram.com/ectorious.official/"
                 style={{
                   height: 40,
                   width: 40,
                 }}
+                className="social-icon-a"
               />
             </div>
           </div>
