@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination,    Parallax } from "swiper/modules";
+import { Navigation, Pagination, Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
 // import { useTheme } from "next-themes";
@@ -11,20 +11,20 @@ import "react-social-icons/linkedin";
 import "react-social-icons/instagram";
 import ParticlesComponent from "./Particles";
 import { useEffect } from "react";
-import fadeWhenScroll from '@/app/common/fadeWhenScroll'
-import removeSlashFromBagination from '@/app/common/removeSlashpagination'
+import fadeWhenScroll from "@/app/common/fadeWhenScroll";
+import removeSlashFromBagination from "@/app/common/removeSlashpagination";
 export default function LandingSwiper() {
   //   const { theme } = useTheme();
   useEffect(() => {
     const handle = setTimeout(() => {
       try {
-        fadeWhenScroll(document.querySelectorAll(".fixed-slider .caption"));
+        fadeWhenScroll(document.querySelectorAll(".fixed-slider"));
         removeSlashFromBagination();
       } catch (err) {
         console.error("Error in custom scripts", err);
       }
     }, 1500);
-  
+
     return () => clearTimeout(handle);
   }, []);
   const introData = [
@@ -52,11 +52,14 @@ export default function LandingSwiper() {
   ];
 
   return (
-    <header className="slider slider-prlx relative fisxed-slider w-full  overflow-hidden text-center"  style={{ height: '100vh' }}>
-        <ParticlesComponent />
+    <header
+      className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center"
+      style={{ height: "100vh" }}
+    >
+      <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination,Autoplay]}
+          modules={[Parallax, Navigation, Pagination]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -78,24 +81,37 @@ export default function LandingSwiper() {
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
-              <div  data-overlay-dark="3" className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
-                <div className="caption center lg:w-1/2 sm:w-full">
-                  <h1 className="color-font">{item.title}</h1>
-                  <p className="mb-20">{item.content}</p>
-                  <Link href={item.route} className="butn bord curve mt-[50px]">
-                    {" "}
-                    Load More
-                  </Link>
+              <div className="container">
+                <div
+                  data-overlay-dark="3"
+                  className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation "
+                >
+                  <div className="caption center mt-30">
+                    <h1 className="color-font">{item.title}</h1>
+                    <p className="mb-20">{item.content}</p>
+                    <Link
+                      href={item.route}
+                      className="butn bord curve mt-[50px]"
+                    >
+                      {" "}
+                      Load More
+                    </Link>
+                  </div>
+                </div>
+                <div className="circle-color">
+                  {" "}
+                  <div className="gradient-circle"></div>
+                  <div className="gradient-circle two"></div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="setone setwo"> 
-          <div className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]"> 
+        <div className="setone setwo">
+          <div className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer text-[var(----color-value)]">
             <ChevronRight size={20} />
           </div>
-          <div className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer  text-[var(----color-value)]"> 
+          <div className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer  text-[var(----color-value)]">
             <ChevronLeft size={20} />
           </div>
         </div>
@@ -133,12 +149,6 @@ export default function LandingSwiper() {
           />
         </div>
       </div>
-      <div className="circle-color">
-        {" "}
-        <div className="gradient-circle"></div>
-        <div className="gradient-circle two"></div>
-      </div>
     </header>
-   
   );
 }

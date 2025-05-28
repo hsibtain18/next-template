@@ -19,9 +19,10 @@ export default function Home() {
   const mainContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    debugger
     if (fixedSliderRef.current && mainContentRef.current) {
-      // const slideHeight = fixedSliderRef.current.offsetHeight;
-      // mainContentRef.current.style.marginTop = `${slideHeight}px`;
+      const slideHeight = fixedSliderRef.current.offsetHeight;
+      mainContentRef.current.style.marginTop = `${slideHeight}px`;
     }
   }, []);
 
