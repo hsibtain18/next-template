@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import WorksHeader from "../components/WorkHeader";
 import TestimonialsSection from "../components/TestimonialSection";

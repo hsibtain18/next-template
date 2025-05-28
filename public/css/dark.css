@@ -28032,6 +28032,8 @@ span:hover {
   position: relative;
   padding: 80px 40px; 
   z-index: 2;
+  height: 740px !important;
+  margin-bottom: -120px;
 }
 
 .block-sec .testim-box:after {

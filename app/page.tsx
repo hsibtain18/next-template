@@ -12,6 +12,7 @@ import TestimonialSub from "./components/TestimonialSub";
 import ClientTestimonials from "./components/TestimonialVideo";
 
 import Footer from "./components/Footer";
+// import CircularSVG from "./components/CircularSVG";
 
 export default function Home() {
   const fixedSliderRef = useRef<HTMLDivElement>(null);
@@ -38,6 +39,7 @@ export default function Home() {
         <TestimonialCarousel />
         <FunFacts />
         <ClientTestimonials />
+        {/* <CircularSVG/> */}
         <ClientsSection />
         <div className="flex flex-col gap-0">
           <CallToAction />

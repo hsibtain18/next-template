@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import CircularSVG from "./CircularSVG";
 
 const ClientTestimonials = () => {
   const [videoIsOpen, setVideoIsOpen] = useState(false);
@@ -82,6 +83,8 @@ const ClientTestimonials = () => {
           </div>
         </div>
       </div>
+      <CircularSVG/>
+
     </section>
   );
 };
