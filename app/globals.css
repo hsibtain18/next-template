@@ -6,11 +6,12 @@
   --background: #ffffff;
   --foreground: #171717;
   --color-value: #000000;
-  --color-border-value: #ffffff;
+ --color-border-value: #000000; 
 }
 .dark {
   --color-value: #ffffff;
-  --color-border-value: #000000;
+  
+  --color-border-value: #ffffff;
 }
 @theme inline {
   --color-background: var(--background);
@@ -915,7 +916,7 @@ body {
 }
 
 .butn.bord {
-  border: 1px solid #fff;
+  border: 1px solid var(--color-border-value);
 }
 
 h1 {
@@ -1270,7 +1271,7 @@ body {
 .work-carousel .swiper-slide {
   padding: 0 15px;
 }
- 
+
 .work-carousel .swiper-slide-active .noraidus .cont {
   opacity: 1;
   visibility: visible;
@@ -1843,6 +1844,11 @@ video {
 .work-carousel .block-sec .testim-box {
   /* margin-bottom: 0px; */
   height: 550px;
+}
+.pages-header .dull-image {
+  width: 100%;
+  height: auto;
+  filter: brightness(95%) contrast(85%);
 }
 [data-overlay-dark],
 [data-overlay-light] {

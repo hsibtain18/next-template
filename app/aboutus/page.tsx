@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-20 pt-5">
+    <section className="flex flex-col gap-10 ">
       <PagesHeader imageLink="/about.webp">
         Our dedicated team of ECTORIOUS is bursting with talent, experience and
         passion for what we do

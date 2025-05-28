@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ReactNode } from "react";
+import SplittingText from "./SplittingWraper";
 
 interface PagesHeaderProps {
   imageLink: string;
@@ -13,14 +14,14 @@ export default function PagesHeader({ imageLink, children }: PagesHeaderProps) {
     <header className="pages-header circle-bg valign">
       <div className="container">
         <div className="row justify-center">
-          <div className="lg:col-span-10">
+          <div className="col-lg-10">
             <div className="cont  text-center">
-              <h1 className="color-font font-bold">
-                {children}
-              </h1>
+              <SplittingText>
+                <h1 className="color-font font-bold">{children}</h1>
+              </SplittingText>
             </div>
           </div>
-          <div className="lg:col-span-10">
+          <div className="col-lg-10">
             <div className="img dull-image">
               <Image
                 src={imageLink}

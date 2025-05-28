@@ -7,7 +7,7 @@ export default function AboutInfoSection() {
       }
       
     return (
-      <section className="intro-section section-padding py-5">
+      <section className="intro-section  ">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-4">

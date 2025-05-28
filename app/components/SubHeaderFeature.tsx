@@ -37,7 +37,7 @@ const SubHeaderFeature = () => {
     { scope: box1 } // Optional, but you can also wrap all three refs in a common parent and scope to that
   );
   return (
-    <section className="container my-20 px-3  mx-auto">
+    <section className="container my-20 px-3  mx-auto section-padding">
       <div className="w-full">
         <div className="sec-head text-center">
           <h3 className="wow color-font">
