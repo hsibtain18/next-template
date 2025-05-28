@@ -1,7 +1,7 @@
 "use client"; // If you're using this in app directory (Next.js 13+)
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import {   Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { workJSON } from "../common/Constant";
@@ -9,7 +9,7 @@ import StarsDisplay from "./starsDisplay";
 
 const TestimonialCarousel = () => {
   const swiperOptions = {
-    modules: [Navigation,Autoplay],
+    modules: [Navigation],
     slidesPerView: 2,
     centeredSlides: true,
     loop: true,

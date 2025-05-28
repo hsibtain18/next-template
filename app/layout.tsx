@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
+      <body className={`font-[family-name:var(--font-poppins)] ${poppins.variable} ${poppins.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           <ScrollToTopButton />

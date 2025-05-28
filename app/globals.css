@@ -101,6 +101,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  /* height: 100vh !important; */
 }
 
 .slider .swiper-slide-active {
@@ -1819,7 +1820,7 @@ video {
 }
 @media screen and (max-width: 720px) {
   .about-us .img .stauts {
-    display: none;
+    display: none !important;
   }
   .sec-head h3 {
     font-size: 20px;

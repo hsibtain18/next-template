@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutUs from "./components/Aboutus";
 import CallToAction from "./components/CallToAction";
 import ClientsSection from "./components/ClientsData";
@@ -17,23 +17,23 @@ import Footer from "./components/Footer";
 export default function Home() {
   const fixedSliderRef = useRef<HTMLDivElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
-
+  const [isSliderReady, setIsSliderReady] = useState(false);
+ 
   useEffect(() => {
-    debugger
-    if (fixedSliderRef.current && mainContentRef.current) {
-      const slideHeight = fixedSliderRef.current.offsetHeight;
-      mainContentRef.current.style.marginTop = `${slideHeight}px`;
+    if (isSliderReady && fixedSliderRef.current && mainContentRef.current) {
+      // const height = fixedSliderRef.current.offsetHeight;
+      // mainContentRef.current.style.marginTop = `${height}px`;
     }
-  }, []);
+  }, [isSliderReady]);
 
   return (
-    <div className=" font-[family-name:var(--font-poppins)]">
-      <div ref={fixedSliderRef}>
-        <LandingSwiper />{" "}
+    <div >
+      <div className="h-[100vh]" ref={fixedSliderRef}>
+        <LandingSwiper  onReady={() => setIsSliderReady(true)} />{" "}
         {/*  this div is getting in the background and below div is getting over this div   */}
       </div>
       {/* <FullScreenLoader /> */}
-      <div className="flex flex-col gap-20 pt-80" ref={mainContentRef}>
+      <div className="flex flex-col gap-20   pt-[100hv]" ref={mainContentRef}>
         <AboutUs />
         <SubHeaderFeature />
         <TestimonialSub />

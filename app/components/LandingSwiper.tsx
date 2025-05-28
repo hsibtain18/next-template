@@ -13,7 +13,7 @@ import ParticlesComponent from "./Particles";
 import { useEffect } from "react";
 import fadeWhenScroll from "@/app/common/fadeWhenScroll";
 import removeSlashFromBagination from "@/app/common/removeSlashpagination";
-export default function LandingSwiper() {
+export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
   //   const { theme } = useTheme();
   useEffect(() => {
     const handle = setTimeout(() => {
@@ -23,7 +23,7 @@ export default function LandingSwiper() {
       } catch (err) {
         console.error("Error in custom scripts", err);
       }
-    }, 1500);
+    }, 100);
 
     return () => clearTimeout(handle);
   }, []);
@@ -54,7 +54,7 @@ export default function LandingSwiper() {
   return (
     <header
       className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center"
-      style={{ height: "100vh" }}
+      
     >
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
@@ -78,6 +78,9 @@ export default function LandingSwiper() {
             el: ".swiper-pagination",
           }}
           className="  swiper-wrapper"
+          onSwiper={()=>{
+            if(onReady) onReady()
+          }}
         >
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">

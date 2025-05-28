@@ -24025,6 +24025,7 @@ span:hover {
   top: 0;
   left: 0;
   right: 0;
+  /* height: 100vh !important; */
 }
 
 .slider .swiper-slide-active {
