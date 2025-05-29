@@ -19,11 +19,11 @@ export default function AboutInfoSection() {
               <div className="text">
                 <p
                   className="wow txt mb-10 words chars splitting"
-                  data-splitting
+                   
                 >
                   {aboutInfo.paragraph1}
                 </p>
-                <p className="wow txt words chars splitting" data-splitting>
+                <p className="wow txt words chars splitting"  >
                   {aboutInfo.paragraph2}
                 </p>
               </div>

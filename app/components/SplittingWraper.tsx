@@ -7,7 +7,7 @@ export default function SplittingText({ children }: { children: React.ReactNode 
     const run = async () => {
       if (typeof window !== 'undefined') {
         const Splitting = (await import('splitting')).default;
-        Splitting({ by: 'chars' });
+        Splitting();
       }
     };
     run();
