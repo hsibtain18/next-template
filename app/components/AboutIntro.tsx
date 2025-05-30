@@ -1,4 +1,40 @@
+'use client'
+import { useRef, useEffect } from 'react';
+import gsap from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { SplitText } from "gsap/SplitText"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin,SplitText);
+
+
 export default function AboutInfoSection() {
+      const textRef = useRef<HTMLDivElement>(null);
+    
+    useEffect(() => {
+        const animateText = async () => {
+          if (!textRef.current) return;
+          const { default: SplitText } = await import('gsap/SplitText');
+          gsap.registerPlugin(SplitText, ScrollTrigger);
+          const split = new SplitText(textRef.current, {
+            type: 'chars',
+          });
+          gsap.from(split.chars, {
+            scrollTrigger: {
+              trigger: textRef.current,
+              start: 'top 80%',
+              toggleActions: 'play none none none',
+              once: true,
+            },
+            opacity: 0,
+            y: 20,
+            stagger: 0.03,
+            duration: 0.2,
+            ease: 'power2.out',
+          });
+        };
+    
+        animateText();
+      }, []);
     const aboutInfo = {
         "id": 1,
         "title": "Who We Are ?",
@@ -16,7 +52,7 @@ export default function AboutInfoSection() {
               </div>
             </div>
             <div className="col-lg-8 offset-lg-1 col-md-8">
-              <div className="text">
+              <div className="text" ref={textRef}>
                 <p
                   className="wow txt mb-10 words chars splitting"
                    

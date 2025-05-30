@@ -25,77 +25,82 @@ const MiddleSectionService = ({ url }: Props) => {
 
   const details = [
     {
-      id: "aam",
+      id: "eem",
       image: "/services/aam.webp",
-      title: "Amazon Account Management",
+      title: "End-to-End Account Managementt",
       isFilter: "aam",
 
       details: {
         description:
-          "Managing an Amazon account can be complex and time-consuming, but with our hands-on account management solutions, we make the process seamless and stress-free. We take the burden off your shoulders, handling everything from inventory management to troubleshooting, so you can focus on growing your business. Our team works tirelessly to ensure that your account is not only healthy but also fully compliant with Amazon’s ever-evolving policies, helping you avoid penalties and disruptions.",
+          "Navigating the complexities of Amazon's marketplace can be overwhelming. From limited customer data and rising advertising costs to intricate logistics and the constant battle for competitive search rankings — the hurdles are real. At ECTORIOUS, we turn these challenges into growth opportunities. Our comprehensive Amazon Account Management services are designed to simplify your journey and maximize your potential.",
         description2:
-          "We also prioritize optimization, ensuring that your account is set up for long-term success. Whether it’s fine-tuning product listings for maximum visibility, analyzing sales data for growth opportunities, or resolving any issues with Amazon's platform quickly and efficiently, we’ve got you covered. Our approach is tailored to your unique business needs, ensuring your Amazon operations run smoothly and are always on track for continued success.",
+          "Our seasoned experts optimize every facet of your Amazon presence — from strategic advertising and creative content to detailed account oversight. We handle everything: product listing optimization, inventory management, advertising campaigns, and performance monitoring. We know how much your brand means to you, and we’re committed to elevating it. With our tailored strategies and unwavering support, you'll not only navigate the Amazon ecosystem — you'll thrive in it. Partner with us and experience the power of true expertise and passion.",
         mobile:
-          "Experience effortless Amazon operations with our hands-on account management solutions. We ensure your account remains healthy, compliant, and optimized for success.",
+          "ECTORIOUS transforms Amazon selling challenges into growth opportunities through expert account management, advertising, and optimization. We help your brand thrive with tailored strategies, creative content, and end-to-end support for lasting marketplace success.",
 
         expertiseIncludes: [
-          "Strategic inventory and fulfillment planning.",
-          "Comprehensive account audits to identify growth opportunities.",
-          "Resolving account issues with precision and care.",
+          "Comprehensive catalog management to ensure accurate and organized product listings.",
+          "Strategic inventory planning to maintain optimal stock levels and meet customer demand.",
+          "Targeted advertising campaigns to enhance product visibility and drive sales growth.",
+          "In-depth performance analysis to provide actionable insights for business optimization.",
+          "Continuous account monitoring to ensure compliance with Amazon's policies and guidelines.",
         ],
         keyBenefits: [
-          "Enhanced account health metrics for sustained performance.",
-          "Reduced operational complexities and smoother workflows.",
-          "Actionable insights to maximize revenue streams.",
+          "We provide detailed analytics and strategic planning to drive informed decisions and foster business growth",
+          "Regular, insightful reporting and transparent communication keep clients informed and aligned with their objectives.",
+          "Our tailored growth strategies and dedicated support consistently meet and exceed clients' business expectations",
         ],
       },
     },
     {
       id: "ppc",
-      title: "PPC Management",
+      title: "Advertising & PPC Management",
       image: "/services/ppc.webp",
       isFilter: "ppc",
-
       details: {
         description:
-          "Mastering the art of Amazon advertising is essential for standing out in a competitive marketplace, and our PPC services are designed to help you do just that. We combine advanced, data-driven analytics with innovative and creative strategies to create targeted advertising campaigns that drive results. Our approach goes beyond just placing ads – we carefully analyze market trends, customer behavior, and competitor activity to ensure that your ads reach the right audience at the right time.",
+          "In the ever-evolving Amazon landscape, advertising is no longer optional; it is essential. Strategic advertising serves as the backbone of sustainable growth. At ECTORIOUS, our Advertising & PPC Management service is designed to deliver performance-driven results through a combination of strategic planning, real-time optimization, and in-depth analytics. We don’t just manage campaigns; we engineer them.",
         description2:
-          "By utilizing Amazon's robust advertising tools and features, we craft tailored campaigns that maximize visibility and conversion potential. Whether you're aiming to boost product sales, increase brand awareness, or drive traffic to your listings, our strategies are designed to ensure you get the highest return on investment. Our team continuously monitors and optimizes your campaigns to maintain a competitive edge, ensuring you outshine your competitors and achieve sustained growth in your Amazon business.",
+          "From the setup of Sponsored Products, Sponsored Brands, and Sponsored Display to granular bid adjustments and keyword targeting, our approach is holistic and data-informed. We monitor ACoS, TACoS, conversion rates, and trends to ensure every dollar contributes to growth. With transparency, continuous testing, and tailored strategies, ECTORIOUS becomes an extension of your team to deliver long-term advertising success.",
         mobile:
-          "Master the art of Amazon advertising with our PPC services. We blend cutting-edge analytics with creative strategies to help you outshine competitors.",
+          "We don’t just run Amazon ads — we engineer data-driven PPC campaigns tailored for visibility, efficiency, and profitability.",
         expertiseIncludes: [
-          "Advanced campaign setup, segmentation, and optimization.",
-          "In-depth analysis to identify high-performing keywords.",
-          "Regular performance reporting with actionable recommendations.",
+          "Fully customized PPC campaign structures tailored to your catalog and goals",
+          "Continuous bid optimization and keyword refinement for peak performance",
+          "Sponsored Ads (Products, Brands, Display) strategy and execution",
+          "Advanced data analysis using sponsored reports and market insights",
+          "Real-time ACoS, TACoS, and ROI monitoring with strategic adjustments",
         ],
         keyBenefits: [
-          "Higher ROI with reduced ACOS.",
-          "Improved ad visibility and click-through rates.",
-          "Long-term profitability through continuous campaign refinement.",
+          "Enhanced ad performance through targeting, bidding, and optimization for maximum efficiency",
+          "Data-driven decisions supported by in-depth analytics and actionable real-time performance insights",
+          "Transparent reporting that keeps your team aligned with objectives and campaign performance",
         ],
       },
     },
     {
-      id: "bm",
+      id: "cbm",
       image: "/services/bm.webp",
-      title: "Brand Management",
+      title: "Creative & Branding Services",
       isFilter: "brand",
       details: {
         description:
-          "Your brand is more than just a logo or a name; it represents the core of your business, your values, and your promise to your customers. It’s the emotional connection that drives trust, loyalty, and recognition. A strong brand isn’t simply about standing out in the marketplace; it’s about creating an identity that resonates deeply with your target audience and aligns with their needs, desires, and expectations.",
+          "First impressions matter. On Amazon, where buyers make decisions in seconds, strong visual storytelling and compelling content are essential to stand out. At ECTORIOUS, our Creative & Branding Services are designed to elevate your brand and enhance conversion through strategic, high-impact content. We specialize in crafting product listings that not only look great but also perform.",
         description2:
-          "We specialize in crafting and nurturing that connection, ensuring that your brand stands as a beacon of quality and consistency. By focusing on both the visual and emotional elements, we help you create a compelling presence that not only attracts attention but also builds trust and encourages customer conversion. From strategic messaging to creative design, we focus on every aspect to ensure that your brand is not only seen but also remembered and valued by your customers.",
+          "From optimized titles and bullet points to high-resolution images, A+ Content, and storefronts, every element is crafted to reflect your brand and appeal to your audience. Our team aligns creative assets with SEO and buyer behavior insights to drive trust and clicks. Whether launching or refreshing, we deliver data-backed creativity that boosts engagement and sales.",
         mobile:
-          "Your brand is more than a logo; it’s a promise to your customers. We’ll help you create a compelling presence that captivates and converts.",
+          "Captivate Amazon shoppers with creative content that builds trust, communicates value, and turns clicks into conversions.",
         expertiseIncludes: [
-          "Custom A+ Content and Storefront creation.",
-          "Strategic branding aligned with your business goals.",
-          "Ongoing monitoring to ensure brand consistency and growth.",
+          "Optimized product listings with compelling titles, bullet points, and keyword-rich descriptions",
+          "High-quality listing images including lifestyle, infographics, and packaging representation",
+          "Professional product video creation designed to increase engagement and conversion rates",
+          "A+ Content and Brand Story development that builds trust and enhances brand identity",
+          "Storefront design and creative strategy aligned with Amazon SEO and buyer behavior insights",
         ],
         keyBenefits: [
-          "Elevated brand credibility and customer trust.",
-          "Increased conversion rates through optimized content.",
-          "Streamlined processes for sustainable branding success.",
+          "High-performing visuals and content crafted to boost engagement, trust, and conversions",
+          "On-brand presentation across listings and storefronts for a strong and cohesive identity",
+          "Creative decisions informed by data, trends, and customer behavior for maximum impact",
         ],
       },
     },
@@ -116,7 +121,7 @@ const MiddleSectionService = ({ url }: Props) => {
         </div>
 
         <div className="col-md-7">
-        <div className={`dull-image ${selectedWork?.isFilter || ''}`}>
+          <div className={`dull-image ${selectedWork?.isFilter || ""}`}>
             <Image
               src={selectedWork.image}
               alt="Work"

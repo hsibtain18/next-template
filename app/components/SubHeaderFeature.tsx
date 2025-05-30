@@ -66,7 +66,7 @@ const SubHeaderFeature = () => {
               </svg>
             </div>
             <div className="bottom-link">
-              <h6>PPC Management</h6>
+              <h6>Advertising & PPC Management</h6>
               <p>
                 Optimized PPC campaigns to drive targeted traffic, maximize ROI,
                 and boost sales.
@@ -100,13 +100,13 @@ const SubHeaderFeature = () => {
               </svg>
             </div>
             <div className="bottom-link">
-              <h6>Brand Management</h6>
+              <h6>Creative & Branding Services</h6>
               <p>
                 Crafting compelling brand stories that stand out and build
                 customer trust.
               </p>
 
-              <Link href={'/services/bm'} className="butn bord curve   mt-auto mx-auto mt-25">
+              <Link href={'/services/cbm'} className="butn bord curve   mt-auto mx-auto mt-25">
               Read more
               </Link>
             </div>
@@ -131,13 +131,13 @@ const SubHeaderFeature = () => {
               </svg>
             </div>
             <div className="bottom-link">
-              <h6>Account Management</h6>
+              <h6>End-to-End Account Management</h6>
               <p>
                 Optimized PPC campaigns to drive targeted traffic, maximize ROI,
                 and boost sales.
               </p>
 
-              <Link href={'/services/aam'} className="butn bord curve   mt-auto mx-auto mt-25">
+              <Link href={'/services/eem'} className="butn bord curve   mt-auto mx-auto mt-25">
               Read more
               </Link>
             </div>

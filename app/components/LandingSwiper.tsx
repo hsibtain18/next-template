@@ -30,24 +30,24 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
   const introData = [
     {
       id: 1,
-      title: "Amazon Account Management",
+      title: "End-to-End Account Management",
       content:
         "Streamline your Amazon operations with expert account management for optimal health, compliance, and success.",
-      route: "/services/aam/",
+      route: "/services/eem/",
     },
     {
       id: 2,
-      title: "PPC Management",
+      title: "Advertising & PPC Management",
       content:
         " Elevate your Amazon advertising with data-driven PPC strategies that outperform competitors.",
       route: "/services/ppc/",
     },
     {
       id: 3,
-      title: "Brand Management",
+      title: "Creative & Branding Services",
       content:
         "Build a captivating brand presence that resonates with customers and drives conversions.",
-      route: "/services/bm/",
+      route: "/services/cbm/",
     },
   ];
 

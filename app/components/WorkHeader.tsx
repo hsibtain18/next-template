@@ -8,20 +8,20 @@ interface PagesHeaderProps {
 export default function WorksHeader({ url }: PagesHeaderProps) {
   const works = [
     {
-      id: "aam",
-      title: "Amazon Account Management",
+      id: "eem",
+      title: "End-to-End Account Management",
       description:
         "Experience effortless Amazon operations with our hands-on account management solutions. We ensure your account remains healthy, compliant, and optimized for success.",
     },
     {
       id: "ppc",
-      title: "PPC Management",
+      title: "Advertising & PPC Management",
       description:
         "Master the art of Amazon advertising with our PPC services. We blend cutting-edge analytics with creative strategies to help you outshine competitors.",
     },
     {
-      id: "bm",
-      title: "Brand Management",
+      id: "cbm",
+      title: "Creative & Branding Services",
       description:
         "Your brand is more than a logo; it’s a promise to your customers. We’ll help you create a compelling presence that captivates and converts.",
     },
@@ -78,9 +78,7 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
                   <p>{displayWorkDescription.description}</p>
                 )}
               </div>
-              <div className="bactxt custom-font valign">
-                <span className="full-width">Works</span>
-              </div>
+             
             </div>
           </div>
         </div>

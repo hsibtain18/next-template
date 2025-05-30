@@ -7,9 +7,9 @@ import WorksHeader from "@/app/components/WorkHeader";
 import { notFound } from "next/navigation";
 import React from "react";
 
-const validServices = ["aam", "ppc", "bm", "testimonials"];
+const validServices = ["eem", "ppc", "cbm", "testimonials"];
 export async function generateStaticParams() {
-    return ["aam", "ppc", "bm", "testimonials"].map((service) => ({
+    return ["eem", "ppc", "cbm", "testimonials"].map((service) => ({
       service,
     }));
   }
@@ -19,7 +19,7 @@ const ServicePage = async ({
   params: Promise<{ service: string }>;
 }) => {
   const { service } = await params;
-
+debugger
   if (!validServices.includes(service)) {
     notFound();
   }
