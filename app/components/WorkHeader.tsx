@@ -70,7 +70,7 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
     >
       <div className="container">
         <div className="row justify-center">
-          <div className="col-lg-7 col-md-9 static">
+          <div className="col-lg-8 col-md-9 static">
             <div className="capt mt-[50px]">
               <div className="parlx text-center">
                 <h1 className="color-font">{displayWorkDescription.title}</h1>
