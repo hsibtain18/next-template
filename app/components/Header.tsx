@@ -224,7 +224,6 @@ const Navbar = () => {
   }, []);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = () => {
-    debugger;
     setDropdownOpen(!dropdownOpen);
   };
   if (!hasMounted) return null;
