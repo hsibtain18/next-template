@@ -23592,7 +23592,7 @@ span:hover {
 .navbar {
   position: absolute;
   left: 0;
-  top: 40;
+  top: 40px;
   padding: 0;
   margin: 0;
   width: 100%;
