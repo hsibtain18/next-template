@@ -8,11 +8,15 @@ const FunFacts = () => {
   const { theme } = useTheme();
 
   const [navFill, setNavFill] = useState("#ffffff"); // safe default for SSR
+  const [mount, setMount] = useState(false); // safe default for SSR
 
   useEffect(() => {
+    setMount(true)
     setNavFill(theme !== "dark" ? "#000000" : "#ffffff");
   }, [theme]);
-
+  if(!mount){
+    return null;
+  }
   return (
     <section className="number-sec mx-auto fun-section">
       <div className="container">

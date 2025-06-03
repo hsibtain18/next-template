@@ -166,7 +166,7 @@ const MiddleSectionService = ({ url }: Props) => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="25"
+                      width="20"
                       viewBox="0 0 122.88 109.76"
                       xmlSpace="preserve"
                     >
@@ -202,7 +202,7 @@ const MiddleSectionService = ({ url }: Props) => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="25"
+                      width="20"
                       viewBox="0 0 122.88 109.76"
                       xmlSpace="preserve"
                     >

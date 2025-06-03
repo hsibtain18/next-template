@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import { Poppins } from "next/font/google";
 import ScrollToTopButton from "./components/CursorToTop";
-import MouseCursor from "./components/MouseCursor";
+import MouseCursor from "./components/MouseCursor"; 
 
 const poppins = Poppins({
   subsets: ["latin"],
