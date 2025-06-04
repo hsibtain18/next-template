@@ -34,7 +34,7 @@ const ParticlesComponent = () => {
     return {
       background: {
         color: {
-          value: isDark ? "#000000" : "#ffffff", // transparent dark bg or white bg
+          value: isDark ? "rgba(0, 0, 0, 0)" : "#ffffff", // transparent dark bg or white bg
         },
       },
       fpsLimit: 120,
