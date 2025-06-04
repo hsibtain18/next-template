@@ -45,7 +45,8 @@
   --sub-bg-background : #f5f5f5;
   --ticker-color-background : #1e40af;
   --ticker-text-color: #ffffff;
-  --hover-color: #12c2e9
+  --hover-color: #12c2e9;
+  --mobile-background:#11141b;
 }
 .dark {
   --color-value: #ffffff;
@@ -55,13 +56,18 @@
   --color-border-navbar: #333538;
   --ticker-color-background : #60a5fa;
   --ticker-text: #000000;
+ 
+
 }
 *,
 :after,
 :before {
   box-sizing: border-box;
 }
-
+ .mobile-background{
+  background-color: var(--mobile-background) !important; 
+  padding-bottom: 10px !important;
+ }
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -30466,3 +30472,4 @@ body.hideX .pace {
 .dropdown-toggle {
   display: flex !important;
 }
+

@@ -2086,3 +2086,7 @@ video {
 .skills-circle .custom svg {
   width: 100%;
 }
+
+.mobile-background {
+  background-color: var(--background);
+}
