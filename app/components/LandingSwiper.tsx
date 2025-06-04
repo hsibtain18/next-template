@@ -52,10 +52,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
   ];
 
   return (
-    <header
-      className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center"
-      
-    >
+    <header className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center">
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
@@ -78,8 +75,8 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
             el: ".swiper-pagination",
           }}
           className="  swiper-wrapper"
-          onSwiper={()=>{
-            if(onReady) onReady()
+          onSwiper={() => {
+            if (onReady) onReady();
           }}
         >
           {introData.map((item) => (
@@ -94,9 +91,8 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
                     <p className="mb-20">{item.content}</p>
                     <Link
                       href={item.route}
-                      className="butn bord curve mt-[50px]"
+                      className="butn bord curve mt-[50px] inline-block"
                     >
-                      {" "}
                       Load More
                     </Link>
                   </div>
