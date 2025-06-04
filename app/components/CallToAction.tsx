@@ -23,7 +23,7 @@ const CallToAction = () => {
             </div>
           </div>
           <div className="col-md-4 col-lg-3 valign">
-            <Link href={""} className="butn bord curve wow fadeInUp">
+            <Link href={"/contactus"} className="butn bord curve wow fadeInUp">
               <span>Get In Touch</span>
             </Link>
           </div>
