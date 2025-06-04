@@ -6,11 +6,11 @@
   --background: #ffffff;
   --foreground: #171717;
   --color-value: #000000;
- --color-border-value: #000000; 
+  --color-border-value: #000000;
 }
 .dark {
   --color-value: #ffffff;
-  
+
   --color-border-value: #ffffff;
 }
 @theme inline {
@@ -1624,6 +1624,7 @@ body {
 
 .block-sec .testim-box .head-box h4 {
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .block-sec .testim-box .item p {
@@ -1842,7 +1843,7 @@ video {
   }
 }
 .work-carousel .block-sec .testim-box {
-  /* margin-bottom: 0px; */
+  margin-bottom: 0px !important;
   height: 550px;
 }
 .pages-header .dull-image {

@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin,SplitText);
 
 export default function AboutInfoSection() {
       const textRef = useRef<HTMLDivElement>(null);
+      const textRef2 = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
         const animateText = async () => {
@@ -21,6 +22,22 @@ export default function AboutInfoSection() {
           gsap.from(split.chars, {
             scrollTrigger: {
               trigger: textRef.current,
+              start: 'top 80%',
+              toggleActions: 'play none none none',
+              once: true,
+            },
+            opacity: 0,
+            y: 20,
+            stagger: 0.03,
+            duration: 0.2,
+            ease: 'power2.out',
+          });
+          const split2 = new SplitText(textRef2.current, {
+            type: 'chars',
+          });
+          gsap.from(split2.chars, {
+            scrollTrigger: {
+              trigger: textRef2.current,
               start: 'top 80%',
               toggleActions: 'play none none none',
               once: true,
@@ -52,14 +69,14 @@ export default function AboutInfoSection() {
               </div>
             </div>
             <div className="col-lg-8 offset-lg-1 col-md-8">
-              <div className="text" ref={textRef}>
+              <div className="text" >
                 <p
                   className="wow txt mb-10 words chars splitting"
-                   
+                    ref={textRef}
                 >
                   {aboutInfo.paragraph1}
                 </p>
-                <p className="wow txt words chars splitting"  >
+                <p className="wow txt words chars splitting"   ref={textRef2} >
                   {aboutInfo.paragraph2}
                 </p>
               </div>

@@ -316,22 +316,22 @@ const Navbar = () => {
         }`}
                 >
                   <Link
-                    href="/services/aam"
+                    href="/services/eem"
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
-                    Amazon Account Management
+                      	End-to-End Account Management
                   </Link>
                   <Link
                     href="/services/ppc"
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
-                    PPC Management
+                  Advertising & PPC Management
                   </Link>
                   <Link
-                    href="/services/bm"
+                    href="/services/cbm"
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
-                    Brand Management
+                   Creative & Branding Services
                   </Link>
                 </div>
               </div>
@@ -345,15 +345,7 @@ const Navbar = () => {
                 Contact
               </Link>
 
-              {/* <Link
-                href="/calender"
-                className={`nav-link btn Nav-btn btn-primary ${
-                  theme === "light" ? "Nav-btn-light" : "Nav-btn-dark"
-                }`}
-              >
-                Want a Free Audit?{" "}
-                <ArrowRight className="ml-2 pt-5" size={20} />
-              </Link> */}
+            
             </div>
 
             <div className="flex items-center gap-4">
@@ -382,14 +374,14 @@ const Navbar = () => {
                 Services
               </summary>
               <div className="ml-4 mt-2 space-y-1">
-                <Link href="/services/aam" className="block">
-                  Amazon Account Management
+                <Link href="/services/eem" className="block">
+                  	End-to-End Account Management
                 </Link>
                 <Link href="/services/ppc" className="block">
-                  PPC Management
+                   Advertising & PPC Management
                 </Link>
-                <Link href="/services/bm" className="block">
-                  Brand Management
+                <Link href="/services/cbm" className="block">
+                  Creative & Branding Services
                 </Link>
               </div>
             </details>

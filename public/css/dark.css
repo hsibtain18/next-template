@@ -3300,6 +3300,7 @@ tbody.collapse.show {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  font-size: 12px;
 }
 
 .dropdown-item:focus,
