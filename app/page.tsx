@@ -11,8 +11,7 @@ import TestimonialCarousel from "./components/TestimonialCarousel";
 import TestimonialSub from "./components/TestimonialSub";
 import ClientTestimonials from "./components/TestimonialVideo";
 
-import Footer from "./components/Footer";
-// import CircularSVG from "./components/CircularSVG";
+import Footer from "./components/Footer"; 
 
 export default function Home() {
   const fixedSliderRef = useRef<HTMLDivElement>(null);
@@ -33,15 +32,14 @@ export default function Home() {
         {/*  this div is getting in the background and below div is getting over this div   */}
       </div>
       {/* <FullScreenLoader /> */}
-      <div className="flex flex-col gap-20   pt-[100hv]" ref={mainContentRef}>
+      <div className="flex flex-col gap-14   pt-[100hv]" ref={mainContentRef}>
         <AboutUs />
         <SubHeaderFeature />
         <TestimonialSub />
         <TestimonialCarousel />
         <FunFacts />
-        <ClientTestimonials />
-        {/* <CircularSVG/> */}
-        <ClientsSection />
+        <ClientTestimonials /> 
+        <ClientsSection />     
         <div className="flex flex-col gap-0">
           <CallToAction />
           <Footer />
