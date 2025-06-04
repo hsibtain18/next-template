@@ -25,8 +25,8 @@ const ClientsSection = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 5,
-          ease: 'power3.out',
+          duration: 4,
+          ease: 'power1.inOut',
           scrollTrigger: {
             trigger: logosRef.current,
             start: 'top 85%',
