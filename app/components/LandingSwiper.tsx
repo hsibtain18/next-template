@@ -119,32 +119,36 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
         <div className="social-icon">
           <SocialIcon
             url="www.facebook.com"
+            target="_blank"
             bgColor="transparent"
             href="https://www.facebook.com/share/1DpZghiiTp/?mibextid=wwXIfr"
-            target="_blank"
             style={{
               height: 40,
               width: 40,
             }}
+            className="social-icon-a"
           />
           <SocialIcon
             url="www.linkedin.com"
             bgColor="transparent"
+            href="https://www.linkedin.com/company/ectorious/"
             target="_blank"
             style={{
               height: 40,
               width: 40,
             }}
+            className="social-icon-a"
           />
           <SocialIcon
             url="www.instagram.com"
-            bgColor="transparent"
             target="_blank"
+            bgColor="transparent"
             href="https://www.instagram.com/ectorious.official/"
             style={{
               height: 40,
               width: 40,
             }}
+            className="social-icon-a"
           />
         </div>
       </div>
