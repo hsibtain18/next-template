@@ -3,6 +3,8 @@ import { useRef, useEffect } from "react";
 import gsap from 'gsap';
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from "next/image";
+
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
 export default function NewsTicker() {
@@ -39,7 +41,8 @@ export default function NewsTicker() {
     <div className="block fixed top-0 left-0 w-full ticker-bar text-center py-2 overflow-hidden z-50 shadow-md">
       <div className="whitespace-nowrap h-[35px]  "  >
         
-        <span  ref={tickerRef} className="  tracking-wide w-100 text-sm">
+          <Image src='/tickerIcon.svg' alt="icon image" width={65} height={65} />
+        <span  ref={tickerRef}  className="  tracking-wide w-100 text-sm">
           Want a Free Audit?
         </span> 
       </div>

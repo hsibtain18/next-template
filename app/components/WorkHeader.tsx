@@ -9,13 +9,14 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
   const works = [
     {
       id: "eem",
-      title: "End-to-End Account Management",
+      title: "Account Management",
       description:
         "Experience effortless Amazon operations with our hands-on account management solutions. We ensure your account remains healthy, compliant, and optimized for success.",
     },
     {
       id: "ppc",
-      title: "Advertising & PPC Management",
+      title: "Advertising & PPC ",
+      title2: "  Management",
       description:
         "Master the art of Amazon advertising with our PPC services. We blend cutting-edge analytics with creative strategies to help you outshine competitors.",
     },
@@ -34,6 +35,7 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
 
   const work2 = {
     title: "Amazing Works",
+    title2:'',
     description:
       "Creativity involves breaking out of expected & repeatable patterns in order to look at things in a different way than ever before.",
   };
@@ -54,7 +56,7 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
         );
       }
     }
-  }, []); 
+  }, []);
   const isSingleWork =
     typeof url !== "undefined" &&
     works.find((w) => w.id === url) !== undefined;
@@ -74,11 +76,15 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
             <div className="capt mt-[50px]">
               <div className="parlx text-center">
                 <h1 className="color-font">{displayWorkDescription.title}</h1>
+                {displayWorkDescription.title &&
+                  <h1 className="color-font">{displayWorkDescription.title2}</h1>
+
+                }
                 {displayWorkDescription.description && (
                   <p>{displayWorkDescription.description}</p>
                 )}
               </div>
-             
+
             </div>
           </div>
         </div>
