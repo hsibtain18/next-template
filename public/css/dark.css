@@ -30424,6 +30424,9 @@ body.hideX .pace {
   font-weight: bolder; 
   
 }
+.ticker-bar img {
+  width: 35px !important;
+}
 
 .dropdown-toggle {
   display: flex !important;
