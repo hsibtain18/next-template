@@ -1,17 +1,38 @@
 "use client";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 
 const CircularSVG = () => {
   const { theme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-  
-    useEffect(() => {
-      setMounted(true);
-    }, []);
-  
-    // Wait until the theme is available (mounted on client)
-    if (!mounted) return null;
+  const [mounted, setMounted] = useState(false);
+
+  useGSAP(() => {
+    setMounted(true);
+    gsap.utils.toArray(".box").forEach((box) => {
+      gsap.fromTo(
+        box,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: box,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true, // Optional: prevent repeat
+          },
+        }
+      );
+    });
+  }, [mounted]);
+  // Wait until the theme is available (mounted on client)
+  if (!mounted) return null;
   return (
     <section className="skills-circle   pb-50">
       <div className="container">
@@ -19,7 +40,7 @@ const CircularSVG = () => {
           <div className="col-lg-7">
             <div className="">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 box">
                   <div className="item wow fadeInLeft" data-wow-delay=".6">
                     <div className="custom">
                       <svg
@@ -30,10 +51,8 @@ const CircularSVG = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >
-                        <g id="SVGRepo_bgCarrier" ></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                        ></g>
+                        <g id="SVGRepo_bgCarrier"></g>
+                        <g id="SVGRepo_tracerCarrier"></g>
                         <g id="SVGRepo_iconCarrier">
                           <g>
                             <g>
@@ -54,7 +73,7 @@ const CircularSVG = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 box">
                   <div className="item wow fadeInLeft" data-wow-delay=".3">
                     <div className="custom">
                       <svg
@@ -65,10 +84,8 @@ const CircularSVG = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >
-                        <g id="SVGRepo_bgCarrier" ></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                        ></g>
+                        <g id="SVGRepo_bgCarrier"></g>
+                        <g id="SVGRepo_tracerCarrier"></g>
                         <g id="SVGRepo_iconCarrier">
                           <g>
                             <g>

@@ -38,9 +38,8 @@ const Navbar = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
   useEffect(() => {
-    debugger
-    if(showButton){
-      setTheme('light')
+    if (showButton) {
+      setTheme("light");
     }
     if (theme) {
       setHasMounted(true);
@@ -74,13 +73,12 @@ const Navbar = () => {
   if (!hasMounted) return null;
   return (
     <>
-      <NewsTicker />
-
+      {pathname !== "/calender" && <NewsTicker />}
       <nav
-        suppressHydrationWarning={true}
+        suppressHydrationWarning={true} 
         className={`fixed top-0 w-full z-50 shadow-md transition navbar navbar-expand-lg change ${
           theme === "light" ? "light" : ""
-        } ${navClasses}`}
+        } ${navClasses} ${pathname === "/calender" && navClasses ? 'nav-scroll-calender':''} ${pathname == '/calender' ? 'navbar-calender':''} `}
       >
         <div className="container mx-auto px-4 py-2 flex justify-between items-center text-[12px]">
           <Link href="/" className="logo text-2xl font-bold">
@@ -125,7 +123,7 @@ const Navbar = () => {
                     href="/services/eem"
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
-                    End-to-End Account Management
+                    Amazon Account Managemen
                   </Link>
                   <Link
                     href="/services/ppc"
@@ -166,7 +164,6 @@ const Navbar = () => {
                     {theme === "light" ? <Sun /> : <Moon />}
                   </button>
                 )}
-               
               </div>
             </div>
           </div>
@@ -186,7 +183,7 @@ const Navbar = () => {
               </summary>
               <div className="ml-4 mt-2 space-y-1">
                 <Link href="/services/eem" className="block">
-                  End-to-End Account Management
+                  Amazon Account Managemen
                 </Link>
                 <Link href="/services/ppc" className="block">
                   Advertising & PPC Management
@@ -252,7 +249,7 @@ const Navbar = () => {
                     href="/services/eem"
                     className="block  text-gray-600 dark:text-gray-300 hover:text-blue-500 text-[12px] nav-item my-2"
                   >
-                    End-to-End Account Management
+                    Amazon Account Managemen
                   </Link>
                   <Link
                     href="/services/ppc"

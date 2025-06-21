@@ -9,7 +9,7 @@ export default function WorksHeader({ url }: PagesHeaderProps) {
   const works = [
     {
       id: "eem",
-      title: "Account Management",
+      title: "Amazon Account Management",
       description:
         "Experience effortless Amazon operations with our hands-on account management solutions. We ensure your account remains healthy, compliant, and optimized for success.",
     },

@@ -1,5 +1,4 @@
 const loadingPace = () => {
-  debugger
   Pace.on("start", function () {
     document.querySelector("#preloader").classList.remove("isdone");
     document.querySelector(".loading").classList.remove("isdone");

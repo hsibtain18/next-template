@@ -131,7 +131,7 @@ const SubHeaderFeature = () => {
               </svg>
             </div>
             <div className="bottom-link">
-              <h6>End-to-End Account Management</h6>
+              <h6>Amazon Account Managemen</h6>
               <p>
                 Optimized PPC campaigns to drive targeted traffic, maximize ROI,
                 and boost sales.

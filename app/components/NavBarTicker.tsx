@@ -1,16 +1,23 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Image from "next/image";
-
+import { useRouter } from 'next/navigation';
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
 export default function NewsTicker() {
+    const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+
+  const goToAbout = () => {
+    router.push('/calender'); // navigates to /about
+  };
   const tickerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const animateText = async () => {
+      setMounted(true)
       const { SplitText } = await import("gsap/SplitText");
       gsap.registerPlugin(SplitText);
 
@@ -35,8 +42,10 @@ export default function NewsTicker() {
     animateText();
   }, []);
 
+  if(!mounted) return ;
+
   return (
-    <div className="block fixed top-0 left-0 w-full ticker-bar text-center py-2 overflow-hidden z-50 shadow-md">
+    <div className="block fixed top-0 left-0 w-full ticker-bar text-center py-2 overflow-hidden z-50 shadow-md" onClick={goToAbout} >
       <div className="whitespace-nowrap h-[35px]  flex justify-center content-center items-center">
         <span
           ref={tickerRef}

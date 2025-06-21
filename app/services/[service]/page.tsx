@@ -19,7 +19,6 @@ const ServicePage = async ({
   params: Promise<{ service: string }>;
 }) => {
   const { service } = await params;
-debugger
   if (!validServices.includes(service)) {
     notFound();
   }

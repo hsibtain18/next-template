@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import { Poppins } from "next/font/google";
 import ScrollToTopButton from "./components/CursorToTop";
-import MouseCursor from "./components/MouseCursor"; 
+import MouseCursor from "./components/MouseCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,8 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-[family-name:var(--font-poppins)] ${poppins.variable} ${poppins.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body
+        className={`font-[family-name:var(--font-poppins)] ${poppins.variable} ${poppins.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark" // 👈 Set default to "dark"
+          enableSystem={false}
+        >
           <Header />
           <ScrollToTopButton />
           <MouseCursor />

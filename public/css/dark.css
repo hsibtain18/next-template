@@ -23576,7 +23576,9 @@ span:hover {
   z-index: 999;
   min-height: 80px;
 }
-
+.navbar-calender {
+  top: 0px !important;
+}
 .navbar .icon-bar {
   color: #fff;
 }
@@ -23712,7 +23714,9 @@ span:hover {
   transition: transform 0.5s;
   transform: translateY(80px);
 }
-
+.nav-scroll-calender {
+  top: -80px !important;
+}
 .topnav {
   position: fixed;
   top: 0;

@@ -27,7 +27,7 @@ const MiddleSectionService = ({ url }: Props) => {
     {
       id: "eem",
       image: "/services/aam.webp",
-      title: "End-to-End Account Managementt",
+      title: "Amazon Account Management",
       isFilter: "aam",
 
       details: {

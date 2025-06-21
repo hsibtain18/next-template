@@ -6,7 +6,6 @@ import { useTheme } from "next-themes";
 
 const Calender = () => {
     const { theme, setTheme} = useTheme()
-    debugger
     useEffect(()=>{
       setTheme('light')
       console.log(theme);

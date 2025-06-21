@@ -37,7 +37,8 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
   const introData: temp[] = [
     {
       id: 1,
-      title: "Account Management",
+      title: "Amazon Account",
+      title2: "Management",
       content:
         "Streamline your Amazon operations with expert account management for optimal health, compliance, and success.",
       route: "/services/eem/",
