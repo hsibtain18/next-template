@@ -36,15 +36,12 @@ const Navbar = () => {
     }
 
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-    debugger
   };
   useEffect(() => {
     if (!showButton) {
-      debugger
       setTheme("light");
     }
     else {
-      debugger
       setTheme("dark");
 
     }
