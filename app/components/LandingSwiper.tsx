@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Parallax } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, Parallax } from "swiper/modules";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "@deemlol/next-icons";
 // import { useTheme } from "next-themes";
@@ -15,6 +15,13 @@ import fadeWhenScroll from "@/app/common/fadeWhenScroll";
 import removeSlashFromBagination from "@/app/common/removeSlashpagination";
 export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
   //   const { theme } = useTheme();
+  interface temp {
+    id: number;
+    title: string;
+    title2?: string;
+    content: string;
+    route: string;
+  }
   useEffect(() => {
     const handle = setTimeout(() => {
       try {
@@ -27,24 +34,26 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
 
     return () => clearTimeout(handle);
   }, []);
-  const introData = [
+  const introData: temp[] = [
     {
       id: 1,
-      title: "End-to-End Account Management",
+      title: "Account Management",
       content:
         "Streamline your Amazon operations with expert account management for optimal health, compliance, and success.",
       route: "/services/eem/",
     },
     {
       id: 2,
-      title: "Advertising & PPC Management",
+      title: "Advertising & PPC",
+      title2: "Management",
       content:
         " Elevate your Amazon advertising with data-driven PPC strategies that outperform competitors.",
       route: "/services/ppc/",
     },
     {
       id: 3,
-      title: "Creative & Branding Services",
+      title: "Creative & Branding ",
+      title2: "Services",
       content:
         "Build a captivating brand presence that resonates with customers and drives conversions.",
       route: "/services/cbm/",
@@ -56,7 +65,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination]}
+          modules={[Parallax, Navigation, Pagination ,Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -88,6 +97,9 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
                 >
                   <div className="caption center mt-30">
                     <h1 className="color-font">{item.title}</h1>
+                    {item.title2 && (
+                      <h1 className="color-font">{item.title2}</h1>
+                    )}
                     <p className="mb-20">{item.content}</p>
                     <Link
                       href={item.route}
