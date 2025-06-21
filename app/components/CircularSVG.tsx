@@ -12,7 +12,7 @@ const CircularSVG = () => {
 
   useGSAP(() => {
     setMounted(true);
-    gsap.utils.toArray(".box").forEach((box) => {
+    (gsap.utils.toArray(".box") as HTMLElement[]).forEach((box) => {
       gsap.fromTo(
         box,
         { y: 100, opacity: 0 },
@@ -25,7 +25,7 @@ const CircularSVG = () => {
             trigger: box,
             start: "top 80%",
             toggleActions: "play none none none",
-            once: true, // Optional: prevent repeat
+            once: true,
           },
         }
       );
