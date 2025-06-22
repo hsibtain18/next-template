@@ -1,11 +1,10 @@
 "use client";
 
- 
 import { useTheme } from "next-themes";
 import { testimonialSection } from "../common/Constant";
 import StarDisplay from "./starsDisplay";
 import { useEffect, useState } from "react";
- import gsap from "gsap";
+import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 
@@ -24,19 +23,21 @@ export default function TestimonialsSection() {
     if (!mounted || !sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".testim-box").forEach((box: any, i) => {
-        gsap.from(box, {
-          scrollTrigger: {
-            trigger: box,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          ease: "power3.out",
-          delay: i * 0.1,
-        });
+      gsap.utils.toArray(".testim-box").forEach((box, i) => {
+        if (box instanceof HTMLElement) {
+          gsap.from(box, {
+            scrollTrigger: {
+              trigger: box,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            ease: "power3.out",
+            delay: i * 0.1,
+          });
+        }
       });
     }, sectionRef);
 
@@ -46,7 +47,10 @@ export default function TestimonialsSection() {
   if (!mounted) return null;
 
   return (
-    <section   ref={sectionRef}  className="testimonials section-padding position-re">
+    <section
+      ref={sectionRef}
+      className="testimonials section-padding position-re"
+    >
       <div className="container">
         <div className="row justify-center">
           <div className="col-lg-8 col-md-10">
@@ -59,7 +63,7 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <div className="container" >
+      <div className="container">
         <div className="row wow fadeInUp" data-wow-delay=".3s">
           {testimonialSection.map((slide) => (
             <div
@@ -73,7 +77,7 @@ export default function TestimonialsSection() {
                 <div
                   className={`testim-box testimonials-section relative  mb-0 ${
                     theme === "light" ? "testim-box-light" : ""
-                  }`}  
+                  }`}
                 >
                   <div className="head-box">
                     <h6 className="wow fadeIn" data-wow-delay=".3s">
@@ -88,7 +92,9 @@ export default function TestimonialsSection() {
                     <StarDisplay rating={slide.rating} maxStars={5} />
                     <div className="cont">
                       <h6 className="color-font">{slide.position}</h6>
-                      <h4 className={theme === "light" ? "light" : ""}>{slide.name}</h4>
+                      <h4 className={theme === "light" ? "light" : ""}>
+                        {slide.name}
+                      </h4>
                     </div>
                   </div>
                 </div>

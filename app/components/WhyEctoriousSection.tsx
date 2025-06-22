@@ -14,18 +14,18 @@ useEffect(() => {
   if (!featRef.current) return;
 
   const ctx = gsap.context(() => {
-    gsap.from(featRef.current?.children, {
-      scrollTrigger: {
-        trigger: featRef.current,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.3,
-      ease: "power2.out",
-    });
+  gsap.from(Array.from(featRef.current!.children), {
+  scrollTrigger: {
+    trigger: featRef.current,
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  stagger: 0.3,
+  ease: "power2.out",
+});
   }, featRef);
 
   return () => ctx.revert();

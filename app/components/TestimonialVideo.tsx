@@ -42,7 +42,7 @@ const ClientTestimonials = () => {
           <div className="row">
             <div className="col-lg-6"></div>
             <div className="col-lg-5 offset-lg-1">
-              <div className="testim-box videoSection" style={{ height: "650px" }}>
+              <div className="testim-box videoSection" style={{ height: "730px" }}>
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".3s">
                     Our Clients
