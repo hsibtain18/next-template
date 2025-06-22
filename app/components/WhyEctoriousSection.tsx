@@ -2,7 +2,34 @@
 
 import Image from "next/image";
 import SimpleParallax from "simple-parallax-js";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 export default function WhyEctoriousSection() {
+const featRef = useRef<HTMLUListElement>(null);
+
+useEffect(() => {
+  if (!featRef.current) return;
+
+  const ctx = gsap.context(() => {
+    gsap.from(featRef.current?.children, {
+      scrollTrigger: {
+        trigger: featRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.3,
+      ease: "power2.out",
+    });
+  }, featRef);
+
+  return () => ctx.revert();
+}, []);
   return (
     <section className="min-area sub-bg">
       <div className="container">
@@ -28,7 +55,7 @@ export default function WhyEctoriousSection() {
                 Our creative Ad agency is ranked among the finest in the US. We
                 cultivate smart ideas for start-ups and seasoned players.
               </p>
-              <ul className="feat">
+              <ul className="feat"  ref={featRef}>
                 <li className="wow fadeInUp" data-wow-delay=".2s">
                   <h6>
                     <span>1</span> Our Mission

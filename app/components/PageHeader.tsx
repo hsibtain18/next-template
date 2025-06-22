@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ReactNode, useEffect, useRef } from "react";
 import gsap from 'gsap';
-import SplittingText from "./SplittingWraper";
+// import SplittingText from "./SplittingWraper";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -35,9 +35,9 @@ export default function PagesHeader({ imageLink, children }: PagesHeaderProps) {
         <div className="row justify-center">
           <div className="col-lg-10">
             <div className="cont  text-center" ref={paragraphRef} >
-              <SplittingText>
-                <h1 className="color-font font-bold">{children}</h1>
-              </SplittingText>
+              {/* <SplittingText> */}
+                <h1 className="color-font font-bold px-[20px]">{children}</h1>
+              {/* </SplittingText> */}
             </div>
           </div>
           <div className="col-lg-10">
