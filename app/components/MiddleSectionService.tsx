@@ -1,7 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 interface Props {
   url?: string;
 }
@@ -22,7 +26,45 @@ interface SelectedWork {
 }
 const MiddleSectionService = ({ url }: Props) => {
   const { theme } = useTheme();
+const expertiseRef = useRef<HTMLDivElement | null>(null);
+const benefitsRef = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
 
+useEffect(() => {
+  setMounted(true);
+  const ctx = gsap.context(() => {
+    gsap.fromTo(
+      expertiseRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: expertiseRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      benefitsRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: benefitsRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+  });
+
+  return () => ctx.revert();
+}, []);
   const details = [
     {
       id: "eem",
@@ -111,6 +153,9 @@ const MiddleSectionService = ({ url }: Props) => {
   if (!selectedWork || !theme) {
     return null; // or some loading / fallback UI
   }
+  if(!mounted){
+  return null;
+}
 
   return (
     <section className="container py-5 service">
@@ -150,7 +195,7 @@ const MiddleSectionService = ({ url }: Props) => {
 
       {/* Expertise Section */}
       <div className="my-5">
-        <div className="card shadow-sm border-0 mb-5">
+        <div className="card shadow-sm border-0 mb-5" ref={expertiseRef}>
           <div className="card-header color-font text-white text-center py-3">
             <h2 className="h4 text-uppercase fw-bold mb-0">
               Our Expertise Includes
@@ -188,7 +233,7 @@ const MiddleSectionService = ({ url }: Props) => {
         </div>
 
         {/* Benefits Section */}
-        <div className="card shadow-sm border-0">
+        <div className="card shadow-sm border-0"  ref={benefitsRef}>
           <div className="card-header color-font text-white text-center py-3">
             <h2 className="h4 text-uppercase fw-bold mb-0">Key Benefits</h2>
           </div>

@@ -6,6 +6,7 @@ import CircularSVG from "./CircularSVG";
 
 const ClientTestimonials = () => {
   const [videoIsOpen, setVideoIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const intro1Data = [
     {
@@ -22,8 +23,12 @@ const ClientTestimonials = () => {
     setVideoIsOpen(!videoIsOpen);
   };
   useEffect(() => {
+    setMounted(true);
     toggleVideo();
   }, []);
+
+  if (!mounted) return null;
+
 
   return (
     <section className="block-sec VideoTestimonial" suppressHydrationWarning>
@@ -37,7 +42,7 @@ const ClientTestimonials = () => {
           <div className="row">
             <div className="col-lg-6"></div>
             <div className="col-lg-5 offset-lg-1">
-              <div className="testim-box">
+              <div className="testim-box videoSection" style={{ height: "650px" }}>
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".3s">
                     Our Clients

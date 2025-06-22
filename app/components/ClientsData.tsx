@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { clientsData } from '../common/Constant';
@@ -14,8 +14,10 @@ const ClientsSection = () => {
   const { theme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
   const logosRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true)
     if (!logosRef.current) return;
 
     const ctx = gsap.context(() => {
@@ -41,7 +43,9 @@ const ClientsSection = () => {
 
   const firstHalf = clientsData.slice(0, clientsData.length / 2);
   const secondHalf = clientsData.slice(clientsData.length / 2);
-
+if(!mounted){
+  return null;
+}
   return (
     <section className="clients section-padding" ref={sectionRef}>
       <div className="container">

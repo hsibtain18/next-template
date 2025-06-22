@@ -28057,8 +28057,26 @@ span:hover {
   position: relative;
   padding: 80px 40px;
   z-index: 2;
-  height: 500px !important;
+  height: 500px;
   margin-bottom: -120px;
+}
+.testim-box .videoSection { 
+  height: 650px !important; 
+}
+
+.testim-box.testimonials-section {
+  height: 625px !important;
+  margin-bottom: 0px;
+}
+.testim-box.testimonials-section .bottom-fixed {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: max-content;
 }
 
 .block-sec .testim-box:after {

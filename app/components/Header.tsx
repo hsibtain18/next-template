@@ -125,18 +125,21 @@ const Navbar = () => {
                 >
                   <Link
                     href="/services/eem"
+                     onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Amazon Account Managemen
                   </Link>
                   <Link
                     href="/services/ppc"
+                     onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Advertising & PPC Management
                   </Link>
                   <Link
                     href="/services/cbm"
+                     onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Creative & Branding Services
