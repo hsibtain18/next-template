@@ -71,7 +71,7 @@ const SubHeaderFeature = () => {
                 Optimized PPC campaigns to drive targeted traffic, maximize ROI,
                 and boost sales.
               </p>
-              <Link href={'/services/ppc'} className="butn bord curve   mt-auto mx-auto mt-25">
+              <Link href={'/services/ppc'} className="butn bord curve   mt-auto mx-auto mt-25 cursor-none">
               Read more
               </Link>
               
@@ -106,7 +106,7 @@ const SubHeaderFeature = () => {
                 customer trust.
               </p>
 
-              <Link href={'/services/cbm'} className="butn bord curve   mt-auto mx-auto mt-25">
+              <Link href={'/services/cbm'} className="butn bord curve   mt-auto mx-auto mt-25 cursor-none ">
               Read more
               </Link>
             </div>
@@ -137,7 +137,7 @@ const SubHeaderFeature = () => {
                 and boost sales.
               </p>
 
-              <Link href={'/services/eem'} className="butn bord curve   mt-auto mx-auto mt-25">
+              <Link href={'/services/eem'} className="butn bord curve   mt-auto mx-auto mt-25 cursor-none">
               Read more
               </Link>
             </div>

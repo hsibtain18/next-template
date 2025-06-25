@@ -23643,7 +23643,7 @@ span:hover {
 }
 
 .navbar .dropdown-menu {
-  display: block;
+  /* display: block; */
   opacity: 0;
   visibility: visible;
   border-radius: 0;
@@ -24874,7 +24874,7 @@ span:hover {
 }
 
 .pages-header .cont {
-  margin-top: 100px !important;
+  margin-top: 70px !important;
   margin-bottom: 50px !important;
 }
 
@@ -24968,7 +24968,8 @@ span:hover {
 
 .page-header.proj-det .img-wrapper,
 .works-header {
-  min-height: 80vh;
+  min-height: 72vh;
+  padding-top: 70px;
 }
 
 .works-header.hfixd {

@@ -100,14 +100,14 @@ const AboutUs = () => {
                 <h4 className="font-extrabold">
                   {" "}
                   <CountUp
-                    className="mr-0.5"
+                    className={`mr-0.5 ${item.id == 2 ? 'text-white':'text-black'}`}
                     end={+item.number}
                     start={0}
                     duration={5}
                   />
-                  <span>{item.letter}</span>
+                  <span className={`${item.id == 2 ? 'text-white':'text-black'}`}>{item.letter}</span>
                 </h4>
-                <h6>{item.statusName}</h6>
+                <h6 className={`${item.id == 2 ? 'text-white':'text-black'}`} >{item.statusName}</h6>
               </div>
             ))}
           </div>

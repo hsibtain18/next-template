@@ -25,15 +25,17 @@ export default function mouseEffect() {
     isHovering = entering;
   };
 
-  const hoverTargets = [
-    ...document.querySelectorAll(".cursor-pointer"),
-    ...document.querySelectorAll("a"),
-  ];
+  // const hoverTargets = [
+  //   ...document.querySelectorAll(".cursor-pointer"),
+  //   ...document.querySelectorAll("a"),
+  //   ...document.querySelectorAll("button"),
+  //   ,
+  // ];
 
-  hoverTargets.forEach((el) => {
-    el.addEventListener("mouseenter", () => handleHover(true));
-    el.addEventListener("mouseleave", () => handleHover(false));
-  });
+  // hoverTargets.forEach((el) => {
+  //   el.addEventListener("mouseenter", () => handleHover(true));
+  //   el.addEventListener("mouseleave", () => handleHover(false));
+  // });
 
   cursorInner.style.visibility = "visible";
   cursorOuter.style.visibility = "visible";
