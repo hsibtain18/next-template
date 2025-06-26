@@ -37,7 +37,7 @@ const SubHeaderFeature = () => {
     { scope: box1 } // Optional, but you can also wrap all three refs in a common parent and scope to that
   );
   return (
-    <section className="container my-5 px-3  mx-auto  ">
+    <section className="container my-5 px-3  mx-auto  subHeader ">
       <div className="w-full">
         <div className="sec-head text-center">
           <h3 className="wow color-font">
@@ -52,7 +52,7 @@ const SubHeaderFeature = () => {
           ref={box1}
           data-wow-delay=".3s"
         >
-          <div className="item-box md-mb50 cont text-center">
+          <div className="item-box md-mb50 cont text-center relative h-[420px]">
             <div className="svgContainer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const SubHeaderFeature = () => {
           ref={box2}
           data-wow-delay=".3s"
         >
-          <div className="item-box md-mb50 cont  text-center">
+          <div className="item-box md-mb50 cont  text-center  relative h-[420px]">
             <div className="svgContainer">
               <svg
                 id="Layer_1"
@@ -117,7 +117,7 @@ const SubHeaderFeature = () => {
           ref={box3}
           data-wow-delay=".3s"
         >
-          <div className="item-box md-mb50 cont  text-center">
+          <div className="item-box md-mb50 cont  text-center  relative h-[420px]">
             <div className="svgContainer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -18,12 +18,12 @@ export default function mouseEffect() {
     }
   });
 
-  const handleHover = (entering) => {
-    const method = entering ? "add" : "remove";
-    cursorInner.classList[method]("cursor-hover");
-    cursorOuter.classList[method]("cursor-hover");
-    isHovering = entering;
-  };
+  // const handleHover = (entering) => {
+  //   const method = entering ? "add" : "remove";
+  //   cursorInner.classList[method]("cursor-hover");
+  //   cursorOuter.classList[method]("cursor-hover");
+  //   isHovering = entering;
+  // };
 
   // const hoverTargets = [
   //   ...document.querySelectorAll(".cursor-pointer"),
