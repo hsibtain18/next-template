@@ -73,7 +73,7 @@ const Navbar = () => {
     setDropdownOpen(!dropdownOpen);
     setTimeout(() => {
       if (!dropdownOpen) setDropdownOpen(false);
-    }, 5000);
+    }, 4000);
   };
   if (!hasMounted) return null;
   return (

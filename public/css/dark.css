@@ -49,6 +49,7 @@
   --ticker-text-color: #ffffff;
   --hover-color: #12c2e9;
   --mobile-background: #11141b;
+  --about-us-border-color: #6464641A
 }
 
 .dark {
@@ -59,6 +60,8 @@
   --color-border-navbar: #333538;
   --ticker-color-background: #60a5fa;
   --ticker-text: #000000;
+  --about-us-border-color: #f5f5f554 
+
 }
 
 *,
@@ -24129,7 +24132,7 @@ span:hover {
 }
 
 .slider .parallax-slider .caption p {
-  color: #eee;
+    color: var(--color-value);
   margin-top: 15px;
   opacity: 0;
   transform: translateY(20px);
@@ -25685,9 +25688,18 @@ span:hover {
   bottom: -10px;
   border: 1px solid hsla(0, 0%, 100%, 0.2);
 }
+.status-item::after {
+     content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid var(--about-us-border-color) !important;
+}
 
 .about-us .img .stauts .item:first-of-type {
-  background: #fff;
+  background: #f5f5f5;
   color: #121a21;
 }
 
@@ -28075,7 +28087,7 @@ span:hover {
   bottom: 0 !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  color: white;
+  /* color: white; */
   padding: 10px;
   text-align: center;
   width: max-content;
@@ -28099,7 +28111,7 @@ span:hover {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #111215;
+  background: var(--background-color);
   z-index: -1;
 }
 
@@ -28931,7 +28943,7 @@ span:hover {
   text-transform: uppercase;
   margin-bottom: 20px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: var(--color-value);
   color: transparent;
 }
 

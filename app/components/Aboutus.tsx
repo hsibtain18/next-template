@@ -96,7 +96,7 @@ const AboutUs = () => {
           </div>
           <div className="stauts">
             {aboutData.status.map((item) => (
-              <div className={`item ${item.id == 2 ? 'text-white':''}`} key={item.id}>
+              <div className={`item  status-item  ${item.id == 2 ? 'text-white':''}`} key={item.id}>
                 <h4 className="font-extrabold">
                   {" "}
                   <CountUp

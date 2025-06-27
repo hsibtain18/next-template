@@ -38,7 +38,7 @@ const Footer = () => {
                 </svg>
                 <div className="cont px-4">
                   <h6>Email Us</h6>
-                  <p>
+                  <p className="text-white">
                     {" "}
                     <a
                       href="mailto:info@ectorious.com"
@@ -69,7 +69,7 @@ const Footer = () => {
                 </svg>
                 <div className="cont px-4">
                   <h6>Call us </h6>
-                  <p>
+                  <p className="text-white">
                     {" "}
                     <a href="tel:+17373101131">+1 (7373) 101-131</a>
                   </p>

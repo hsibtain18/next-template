@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
                     <StarDisplay rating={slide.rating} maxStars={5} />
                     <div className="cont">
                       <h6 className="color-font">{slide.position}</h6>
-                      <h4 className={theme === "light" ? "light" : ""}>
+                      <h4 >
                         {slide.name}
                       </h4>
                     </div>

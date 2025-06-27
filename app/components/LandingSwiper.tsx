@@ -66,7 +66,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination ,Autoplay]}
+          modules={[Parallax, Navigation, Pagination ]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -93,7 +93,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
             <SwiperSlide key={item.title} className="w-full swiper-slide">
               <div className="container">
                 <div
-                  data-overlay-dark="3"
+                  
                   className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation "
                 >
                   <div className="caption center mt-30">
