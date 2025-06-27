@@ -66,7 +66,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination ,Autoplay]}
+          modules={[Parallax, Navigation, Pagination]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}

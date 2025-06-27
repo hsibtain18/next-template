@@ -45,7 +45,7 @@ export default function NewsTicker() {
   if(!mounted) return ;
 
   return (
-    <div className="block fixed top-0 left-0 w-full ticker-bar text-center py-2 overflow-hidden z-50 shadow-md" onClick={goToAbout} >
+    <div className="block fixed top-0 left-0 w-full ticker-bar text-center py-2 overflow-hidden z-[5000] shadow-md" onClick={goToAbout} >
       <div className="whitespace-nowrap h-[35px]  flex justify-center content-center items-center">
         <span
           ref={tickerRef}

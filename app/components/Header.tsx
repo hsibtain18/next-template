@@ -40,10 +40,8 @@ const Navbar = () => {
   useEffect(() => {
     if (!showButton) {
       setTheme("light");
-    }
-    else {
+    } else {
       setTheme("dark");
-
     }
     if (theme) {
       setHasMounted(true);
@@ -73,16 +71,21 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!mobileMenuOpen);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+    setTimeout(() => {
+      if (!dropdownOpen) setDropdownOpen(false);
+    }, 5000);
   };
   if (!hasMounted) return null;
   return (
     <>
       {pathname !== "/calender" && <NewsTicker />}
       <nav
-        suppressHydrationWarning={true} 
+        suppressHydrationWarning={true}
         className={`fixed top-0 w-full z-50 shadow-md transition navbar navbar-expand-lg change ${
           theme === "light" ? "light" : ""
-        } ${navClasses} ${pathname === "/calender" && navClasses ? 'nav-scroll-calender':''} ${pathname == '/calender' ? 'navbar-calender':''} `}
+        } ${navClasses} ${
+          pathname === "/calender" && navClasses ? "nav-scroll-calender" : ""
+        } ${pathname == "/calender" ? "navbar-calender" : ""} `}
       >
         <div className="container mx-auto px-4 py-2 flex justify-between items-center text-[12px]">
           <Link href="/" className="logo text-2xl font-bold">
@@ -125,21 +128,21 @@ const Navbar = () => {
                 >
                   <Link
                     href="/services/eem"
-                     onClick={() => setDropdownOpen(false)}
+                    onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Amazon Account Managemen
                   </Link>
                   <Link
                     href="/services/ppc"
-                     onClick={() => setDropdownOpen(false)}
+                    onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Advertising & PPC Management
                   </Link>
                   <Link
                     href="/services/cbm"
-                     onClick={() => setDropdownOpen(false)}
+                    onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
                     Creative & Branding Services

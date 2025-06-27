@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ReactNode, useEffect, useRef } from "react";
-import gsap from 'gsap';
+import { ReactNode, useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 // import SplittingText from "./SplittingWraper";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 interface PagesHeaderProps {
@@ -13,30 +13,26 @@ interface PagesHeaderProps {
 }
 
 export default function PagesHeader({ imageLink, children }: PagesHeaderProps) {
-  const paragraphRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-  if (!paragraphRef.current) return;
+  const paragraphRef = useRef<HTMLDivElement>(null);
 
-  gsap.from(paragraphRef.current, {
-    scrollTrigger: {
-      trigger: paragraphRef.current,
-      start: 'top 80%',
-      toggleActions: 'play none none none',
-    },
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: 'power2.in',
-  });
-}, []);
+  useLayoutEffect(() => {
+    if (!paragraphRef.current) return;
+
+    gsap.from(paragraphRef.current.querySelector("h1"), {
+      y: -100,
+      opacity: 0,
+      duration: 5,
+      ease: "bounce.out",
+    });
+  }, []);
   return (
     <header className="pages-header circle-bg valign">
       <div className="container">
         <div className="row justify-center">
           <div className="col-lg-10">
-            <div className="cont  text-center" ref={paragraphRef} >
+            <div className="cont  text-center" ref={paragraphRef}>
               {/* <SplittingText> */}
-                <h1 className="color-font font-bold px-[20px]">{children}</h1>
+              <h1 className="color-font font-bold px-[20px]">{children}</h1>
               {/* </SplittingText> */}
             </div>
           </div>
