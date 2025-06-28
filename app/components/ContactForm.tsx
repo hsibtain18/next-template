@@ -21,7 +21,7 @@ export default function ContactSection() {
     formData.append("message", message);
 
     try {
-      const response =  await fetch("https://ectorious.netlify.app/sendEmail.php", {
+      const response =  await fetch("https://ectorious.com/sendEmail.php", {
         method: "POST",
         body: formData,
       });
