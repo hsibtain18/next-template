@@ -3,15 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import Ticker from "./Ticker";
+// import Ticker from "./Ticker";
 import SimpleParallax from "simple-parallax-js";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactSection() {
   const { theme } = useTheme();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [tickerMessages, setTickerMessages] = useState([]);
+  // const [tickerMessages, setTickerMessages] = useState([]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,35 +20,30 @@ export default function ContactSection() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
-
     try {
       const response =  await fetch("https://ectorious.com/sendEmail.php", {
         method: "POST",
         body: formData,
       });
-
+     
       if (!response.ok)
         throw new Error(`HTTP error! Status: ${response.status}`);
-
       const result = await response.json();
 
       if (result.success) {
-        // const msg = result.message || "✅ Email sent successfully!";
-        // setTickerMessages((prev) => [...prev, { value: msg, type: "success" }]);
+        const msg = result.message || "✅ Email sent successfully!"; 
         setName("");
         setEmail("");
-        setMessage("");
-        setTimeout(() => setTickerMessages((prev) => prev.slice(1)), 10000);
+        setMessage(""); 
+        toast.success(msg);
       } else {
-        throw new Error(result.message || "❌ Failed to send email.");
+        // throw new Error(result.message || "❌ Failed to send email.");
+        toast.success("Failed to send email.");
       }
     } catch (error) {
       console.error("Error sending email:", error);
-    //   setTickerMessages((prev) => [
-    //     ...prev,
-    //     { value: error.message || "Unknown error", type: "error" },
-    //   ]);
-      setTimeout(() => setTickerMessages((prev) => prev.slice(1)), 5000);
+        toast.success("Failed to send email.");
+      
     }
   };
 
@@ -55,8 +51,23 @@ export default function ContactSection() {
     <section className="contact section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
-            <Ticker messages={tickerMessages} speed={8} />
+          <div className="col-lg-6"> 
+            <Toaster
+              toastOptions={{
+                duration:5000,
+                position:"bottom-center",
+                success: {
+                  style: {
+                    background: "green"
+                  },
+                },
+                error: {
+                  style: {
+                    background: "red",
+                  },
+                },
+              }}
+            />
             <div className="form md-mb50">
               <h4 className="fw-700 color-font mb-50">Get In Touch.</h4>
               <form id="contact-form" onSubmit={handleSubmit}>
