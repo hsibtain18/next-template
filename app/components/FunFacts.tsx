@@ -54,7 +54,7 @@ const FunFacts = () => {
                 <h6 className="color-font py-2">Complete Account Audit </h6>
 
                 <p className="wow txt words chars splitting" data-splitting>
-                  Complete Account Audit Assess your account to uncover
+                  Assess your account to uncover
                   opportunities and challenges.
                 </p>
               </div>
@@ -86,7 +86,7 @@ const FunFacts = () => {
                 <h6 className="color-font py-2">Scope and Goal Clarity </h6>
 
                 <p className="wow txt words chars splitting" data-splitting>
-                  Scope and Goal Clarity Define clear objectives and align on a
+                  Define clear objectives and align on a
                   tailored strategy.
                 </p>
               </div>
@@ -115,7 +115,7 @@ const FunFacts = () => {
                 <h6 className="color-font py-2">Execution </h6>
 
                 <p className="wow txt words chars splitting" data-splitting>
-                  Execution Implement and optimize strategies to achieve
+                  Implement and optimize strategies to achieve
                   measurable results.
                 </p>
               </div>
