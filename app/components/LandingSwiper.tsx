@@ -10,7 +10,7 @@ import "react-social-icons/facebook";
 import "react-social-icons/linkedin";
 import "react-social-icons/instagram";
 import ParticlesComponent from "./Particles";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import fadeWhenScroll from "@/app/common/fadeWhenScroll";
 import removeSlashFromBagination from "@/app/common/removeSlashpagination";
 import { useTheme } from "next-themes";
@@ -23,11 +23,11 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
     content: string;
     route: string;
   }
-    const { theme } = useTheme();
-
-  const iconColor = theme === 'dark' ? '#ffffff' : '#000000';
-
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+ 
   useEffect(() => {
+    setMounted(true);
     const handle = setTimeout(() => {
       try {
         fadeWhenScroll(document.querySelectorAll(".fixed-slider"));
@@ -65,13 +65,16 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
       route: "/services/cbm/",
     },
   ];
+   if (!mounted) return null; // prevent mismatched render on server/client
+
+  const iconColor = theme === 'dark' ? '#ffffff' : '#000000';
 
   return (
     <header className="slider slider-prlx relative fixed-slider w-full  overflow-hidden text-center">
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination,Autoplay]}
+          modules={[Parallax, Navigation, Pagination, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -143,7 +146,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
             }}
             fgColor={iconColor}
             className="social-icon-a"
-          />  
+          />
           <SocialIcon
             url="www.linkedin.com"
             bgColor="transparent"
