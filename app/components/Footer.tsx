@@ -41,6 +41,7 @@ const Footer = () => {
                   <p className="text-white">
                     {" "}
                     <a
+                      className="text-white"
                       href="mailto:info@ectorious.com"
                       title="Send an email to Ectorious"
                     >
@@ -71,13 +72,18 @@ const Footer = () => {
                   <h6>Call us </h6>
                   <p className="text-white">
                     {" "}
-                    <a href="tel:+17373101131">+1 (7373) 101-131</a>
+                    <a className="text-white" href="tel:+17373101131">
+                      +1 (7373) 101-131
+                    </a>
                   </p>
                 </div>
               </li>
               <li className="d-block">
                 <p className="mb-20">Your Amazon Success Awaits</p>
-                <Link href={"/calender"} className="btn btn-primary w-[250px] Nav-btn-dark">
+                <Link
+                  href={"/calender"}
+                  className="btn btn-primary w-[250px] Nav-btn-dark"
+                >
                   Get Started Today{" "}
                   <ArrowRight className="ml-2 pt-5" size={20} />
                 </Link>

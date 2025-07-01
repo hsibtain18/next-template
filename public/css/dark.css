@@ -24871,7 +24871,7 @@ span:hover {
 }
 
 .pages-header {
-  min-height: 75vh;
+  min-height: 100vh;
   padding: 150px 0 0;
   position: relative;
 }

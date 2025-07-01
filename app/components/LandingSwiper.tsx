@@ -13,8 +13,9 @@ import ParticlesComponent from "./Particles";
 import { useEffect } from "react";
 import fadeWhenScroll from "@/app/common/fadeWhenScroll";
 import removeSlashFromBagination from "@/app/common/removeSlashpagination";
+import { useTheme } from "next-themes";
 export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
-  //   const { theme } = useTheme();
+  // const { theme } = useTheme();
   interface temp {
     id: number;
     title: string;
@@ -22,6 +23,10 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
     content: string;
     route: string;
   }
+    const { theme } = useTheme();
+
+  const iconColor = theme === 'dark' ? '#ffffff' : '#000000';
+
   useEffect(() => {
     const handle = setTimeout(() => {
       try {
@@ -66,7 +71,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
       <ParticlesComponent />
       <div className="swiper-container parallax-slider">
         <Swiper
-          modules={[Parallax, Navigation, Pagination ,Autoplay]}
+          modules={[Parallax, Navigation, Pagination,Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           speed={1500}
@@ -92,10 +97,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
           {introData.map((item) => (
             <SwiperSlide key={item.title} className="w-full swiper-slide">
               <div className="container">
-                <div
-                  
-                  className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation "
-                >
+                <div className="sm:px-5 text-2xl flex items-center justify-center  w-full h-full  min-h-screen bg-img valign dotAnimation ">
                   <div className="caption center mt-30">
                     <h1 className="color-font">{item.title}</h1>
                     {item.title2 && (
@@ -139,8 +141,9 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
               height: 40,
               width: 40,
             }}
+            fgColor={iconColor}
             className="social-icon-a"
-          />
+          />  
           <SocialIcon
             url="www.linkedin.com"
             bgColor="transparent"
@@ -150,6 +153,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
               height: 40,
               width: 40,
             }}
+            fgColor={iconColor}
             className="social-icon-a"
           />
           <SocialIcon
@@ -161,6 +165,7 @@ export default function LandingSwiper({ onReady }: { onReady?: () => void }) {
               height: 40,
               width: 40,
             }}
+            fgColor={iconColor}
             className="social-icon-a"
           />
         </div>
