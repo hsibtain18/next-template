@@ -26424,6 +26424,9 @@ span:hover {
   border: 1px solid hsla(0, 0%, 100%, 0.08);
   height: 160px;
   line-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients .brands .item.no-bord {

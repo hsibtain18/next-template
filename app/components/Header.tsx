@@ -216,14 +216,14 @@ const Navbar = () => {
           <div className="navbar-nav mx-auto  mobile-background w-100 text-center mb-20">
             <Link
               href="/"
-              className="block  font-medium text-gray-700   hover:text-blue-500 text-[12px] nav-item my-2"
+              className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
               Home
             </Link>
 
             <Link
               href="/aboutus"
-              className="block  font-medium text-gray-700   hover:text-blue-500 text-[12px] nav-item my-2"
+              className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
               About
             </Link>
@@ -232,9 +232,9 @@ const Navbar = () => {
             <div className=" w-100 text-center">
               <button
                 onClick={toggleServices}
-                className="font-medium text-gray-700   hover:text-blue-500 text-[12px] nav-item my-2 flex items-center justify-center gap-2 mx-auto"
+                className="font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2 flex items-center justify-center gap-2 mx-auto"
               >
-                <span className="text-[12px]">Services</span>
+                <span className="text-[16px]">Services</span>
                 <svg
                   className={`w-4 h-4 transform transition-transform duration-300 ${
                     mobileServicesOpen ? "rotate-180" : ""
@@ -257,19 +257,19 @@ const Navbar = () => {
                 <div className="mt-2 ml-4 space-y-2   pl-4">
                   <Link
                     href="/services/eem"
-                    className="block  text-gray-600   hover:text-blue-500 text-[12px] nav-item my-2"
+                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
                   >
                     Amazon Account Managemen
                   </Link>
                   <Link
                     href="/services/ppc"
-                    className="block  text-gray-600   hover:text-blue-500 text-[12px] nav-item my-2"
+                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
                   >
                     Advertising & PPC Management
                   </Link>
                   <Link
                     href="/services/cbm"
-                    className="block  text-gray-600   hover:text-blue-500 text-[12px] nav-item my-2"
+                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
                   >
                     Creative & Branding Services
                   </Link>
@@ -279,14 +279,14 @@ const Navbar = () => {
 
             <Link
               href="/testimonials"
-              className="block  font-medium text-gray-700   hover:text-blue-500 text-[12px] nav-item my-2"
+              className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
               Testimonials
             </Link>
 
             <Link
-              href="/contact"
-              className="block  font-medium text-gray-700   hover:text-blue-500 text-[12px] nav-item"
+              href="/contactus"
+              className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item"
             >
               Contact
             </Link>
