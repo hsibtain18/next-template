@@ -68,6 +68,20 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  useEffect(() => {
+  const handleScroll = () => {
+    if (mobileMenuOpen) {
+      setMenuOpen(false);
+      setMobileServicesOpen(false); // optional: close submenus too
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [mobileMenuOpen]);
   const toggleMenu = () => setMenuOpen(!mobileMenuOpen);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
