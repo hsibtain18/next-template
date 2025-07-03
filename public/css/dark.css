@@ -74,7 +74,9 @@
   background-color: var(--mobile-background) !important;
   padding-bottom: 10px !important;
 }
-
+.mobile-background a ,button,span{
+  color:  #ffffff !important;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
