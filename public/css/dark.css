@@ -74,8 +74,10 @@
   background-color: var(--mobile-background) !important;
   padding-bottom: 10px !important;
 }
-.mobile-background a ,button,span{
-  color:  #ffffff !important;
+.mobile-background a,
+.mobile-background button,
+.mobile-background span {
+  color: #ffffff !important;
 }
 html {
   font-family: sans-serif;
