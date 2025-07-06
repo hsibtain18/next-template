@@ -28164,12 +28164,14 @@ span:hover {
   font-size: 16px;
   margin-bottom: 5px;
   letter-spacing: 2px;
+  color: var(--color-value) !important;
   text-transform: uppercase;
 }
 
 .block-sec .testim-box .item .info .cont .author-details {
   font-size: 13px;
   font-weight: 300;
+  color: var(--color-value) !important;
   text-transform: uppercase;
 }
 

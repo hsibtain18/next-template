@@ -86,7 +86,7 @@ const AboutUs = () => {
             <Link  href={'/aboutus'} className="butn bord curve mt-30"><span>Read More</span></Link>  
           </div>
         </div>
-        <div className="w-full md:w-2/3 h-[500px] img">
+        <div className="w-full md:w-2/3 h-[350px] md:h-[500px] img">
           <div className="dull-image">
             <img
               src={aboutData.image}

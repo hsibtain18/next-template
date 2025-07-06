@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Sun, Moon, AlignJustify, X } from "@deemlol/next-icons";
+import { Sun, Moon, AlignJustify, X, ChevronRight } from "@deemlol/next-icons";
 import { useTheme } from "next-themes";
 import gsap from "gsap";
 import NewsTicker from "./NavBarTicker";
@@ -69,19 +69,19 @@ const Navbar = () => {
     };
   }, []);
   useEffect(() => {
-  const handleScroll = () => {
-    if (mobileMenuOpen) {
-      setMenuOpen(false);
-      setMobileServicesOpen(false); // optional: close submenus too
-    }
-  };
+    const handleScroll = () => {
+      if (mobileMenuOpen) {
+        setMenuOpen(false);
+        setMobileServicesOpen(false); // optional: close submenus too
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, [mobileMenuOpen]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [mobileMenuOpen]);
   const toggleMenu = () => setMenuOpen(!mobileMenuOpen);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -268,25 +268,59 @@ const Navbar = () => {
 
               {/* Submenu */}
               {mobileServicesOpen && (
-                <div className="mt-2 ml-4 space-y-2   pl-4">
-                  <Link
-                    href="/services/eem"
-                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
-                  >
-                    Amazon Account Managemen
-                  </Link>
-                  <Link
-                    href="/services/ppc"
-                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
-                  >
-                    Advertising & PPC Management
-                  </Link>
-                  <Link
-                    href="/services/cbm"
-                    className="block  text-gray-600   hover:text-blue-500 text-[16px] nav-item my-2"
-                  >
-                    Creative & Branding Services
-                  </Link>
+                // <div className="mt-2 ml-4 space-y-2   pl-4">
+
+                //   <Link
+                //     href="/services/eem"
+                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
+                //   >
+                //     1. Amazon Account Managemen
+                //   </Link>
+                //   <Link
+                //     href="/services/ppc"
+                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
+                //   >
+                //    2. Advertising & PPC Management
+                //   </Link>
+                //   <Link
+                //     href="/services/cbm"
+                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
+                //   >
+                //     3. Creative & Branding Services
+                //   </Link>
+                // </div>
+                <div className="w-full flex justify-center">
+                  <ol className="mt-2 text-left text-[14px]">
+                    <li className="flex items-start gap-0.5 group">
+                      <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      <Link
+                        href="/services/eem"
+                        className="text-gray-700 group-hover:text-blue-600 transition-colors"
+                      >
+                        Amazon Account Management
+                      </Link>
+                    </li>
+
+                    <li className="flex items-start gap-0.5 group mt-2">
+                      <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      <Link
+                        href="/services/ppc"
+                        className="text-gray-700 group-hover:text-blue-600 transition-colors"
+                      >
+                        Advertising & PPC Management
+                      </Link>
+                    </li>
+
+                    <li className="flex items-start gap-0.5 group mt-2">
+                      <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      <Link
+                        href="/services/cbm"
+                        className="text-gray-700 group-hover:text-blue-600 transition-colors"
+                      >
+                        Creative & Branding Services
+                      </Link>
+                    </li>
+                  </ol>
                 </div>
               )}
             </div>

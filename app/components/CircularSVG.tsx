@@ -34,7 +34,7 @@ const CircularSVG = () => {
   // Wait until the theme is available (mounted on client)
   if (!mounted) return null;
   return (
-    <section className="skills-circle   pb-50">
+    <section className="skills-circle pt-3  pb-50">
       <div className="container">
         <div className="row">
           <div className="col-lg-7">
