@@ -26,7 +26,7 @@ export default function Home() {
     window.scrollTo({ top: 100, behavior: "smooth" });
 
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // window.scrollTo({ top: 0, behavior: "smooth" });
     }, 150);
   }, [isSliderReady]);
 

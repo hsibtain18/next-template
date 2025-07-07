@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 // import Ticker from "./Ticker";
@@ -12,8 +12,10 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [tickerMessages, setTickerMessages] = useState([]);
-
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData();
@@ -21,20 +23,20 @@ export default function ContactSection() {
     formData.append("email", email);
     formData.append("message", message);
     try {
-      const response =  await fetch("https://ectorious.com/sendEmail.php", {
+      const response = await fetch("https://ectorious.com/sendEmail.php", {
         method: "POST",
         body: formData,
       });
-     
+
       if (!response.ok)
         throw new Error(`HTTP error! Status: ${response.status}`);
       const result = await response.json();
 
       if (result.success) {
-        const msg = result.message || "✅ Email sent successfully!"; 
+        const msg = result.message || "✅ Email sent successfully!";
         setName("");
         setEmail("");
-        setMessage(""); 
+        setMessage("");
         toast.success(msg);
       } else {
         // throw new Error(result.message || "❌ Failed to send email.");
@@ -42,23 +44,22 @@ export default function ContactSection() {
       }
     } catch (error) {
       console.error("Error sending email:", error);
-        toast.success("Failed to send email.");
-      
+      toast.success("Failed to send email.");
     }
   };
-
+  if (!mounted) return null;
   return (
     <section className="contact section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6"> 
+          <div className="col-lg-6">
             <Toaster
               toastOptions={{
-                duration:5000,
-                position:"bottom-center",
+                duration: 5000,
+                position: "bottom-center",
                 success: {
                   style: {
-                    background: "green"
+                    background: "green",
                   },
                 },
                 error: {

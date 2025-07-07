@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import scrollToTop from "@/app/common/scrollToTop";
 export default function ScrollToTopButton() {
   useEffect(() => {
+    window.scrollTo({top:0,behavior:"instant"})
     scrollToTop();
   }, []);
 
