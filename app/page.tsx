@@ -23,7 +23,7 @@ export default function Home() {
       // const height = fixedSliderRef.current.offsetHeight;
       // mainContentRef.current.style.marginTop = `${height}px`;
     }
-    window.scrollTo({ top: 100, behavior: "smooth" });
+    // window.scrollTo({ top: 100, behavior: "smooth" });
 
     setTimeout(() => {
       // window.scrollTo({ top: 0, behavior: "smooth" });

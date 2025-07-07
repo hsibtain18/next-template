@@ -13,9 +13,8 @@ export default function ContactSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+ 
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData();
@@ -47,6 +46,10 @@ export default function ContactSection() {
       toast.success("Failed to send email.");
     }
   };
+ useEffect(() => {
+    setMounted(true);
+  }, []);
+
   if (!mounted) return null;
   return (
     <section className="contact section-padding">
