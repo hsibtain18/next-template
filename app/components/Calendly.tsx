@@ -10,11 +10,11 @@ const CalendlyWidget = () => {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 mt-50">
+    <div className="d-flex justify-content-center  align-items-center vh-100  calendly">
       <div
-        className="calendly-inline-widget w-100"
+        className="calendly-inline-widget w-100  md:mt-5"
         data-url="https://calendly.com/ectorious/30min?hide_gdpr_banner=1"
-        style={{ minWidth: "320px", height: "700px" }}
+        style={{ minWidth: "320px", height: "880px" ,overflowY:'hidden' }}
       ></div>
     </div>
   );

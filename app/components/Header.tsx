@@ -20,7 +20,7 @@ const Navbar = () => {
   const toggleServices = () => setMobileServicesOpen(!mobileServicesOpen);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
-  const showButton = pathname !== "/calender";
+  const showButton = pathname !== "/calender/";
 
   const toggleTheme = () => {
     if (buttonRef.current) {
@@ -145,7 +145,7 @@ const Navbar = () => {
                     onClick={() => setDropdownOpen(false)}
                     className="dropdown-item block px-6 py-3 relative hover:pl-10 transition-all duration-300"
                   >
-                    Amazon Account Managemen
+                    Amazon Account Management
                   </Link>
                   <Link
                     href="/services/ppc"
@@ -193,49 +193,18 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* {menuOpen && (
-          <div className={`lg:hidden px-4 pb-4 space-y-2 ${navClasses}`}>
-            <Link href="/" className="block hover:text-blue-500">
-              Home
-            </Link>
-            <Link href="/about" className="block hover:text-blue-500">
-              About
-            </Link>
-            <details className="block">
-              <summary className="cursor-pointer hover:text-blue-500">
-                Services
-              </summary>
-              <div className="ml-4 mt-2 space-y-1">
-                <Link href="/services/eem" className="block">
-                  Amazon Account Managemen
-                </Link>
-                <Link href="/services/ppc" className="block">
-                  Advertising & PPC Management
-                </Link>
-                <Link href="/services/cbm" className="block">
-                  Creative & Branding Services
-                </Link>
-              </div>
-            </details>
-            <Link href="/testimonials" className="block hover:text-blue-500">
-              Testimonials
-            </Link>
-            <Link href="/contact" className="block hover:text-blue-500">
-              Contact
-            </Link>
-             
-          </div>
-        )} */}
         {mobileMenuOpen && (
           <div className="navbar-nav mx-auto  mobile-background w-100 text-center mb-20">
             <Link
               href="/"
+              onClick={() => setMenuOpen(false)}
               className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
               Home
             </Link>
 
             <Link
+              onClick={() => setMenuOpen(false)}
               href="/aboutus"
               className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
@@ -268,32 +237,12 @@ const Navbar = () => {
 
               {/* Submenu */}
               {mobileServicesOpen && (
-                // <div className="mt-2 ml-4 space-y-2   pl-4">
-
-                //   <Link
-                //     href="/services/eem"
-                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
-                //   >
-                //     1. Amazon Account Managemen
-                //   </Link>
-                //   <Link
-                //     href="/services/ppc"
-                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
-                //   >
-                //    2. Advertising & PPC Management
-                //   </Link>
-                //   <Link
-                //     href="/services/cbm"
-                //     className="block  text-gray-600   hover:text-blue-500 text-[14px] nav-item my-2"
-                //   >
-                //     3. Creative & Branding Services
-                //   </Link>
-                // </div>
                 <div className="w-full flex justify-center">
                   <ol className="mt-2 text-left text-[14px]">
                     <li className="flex items-start gap-0.5 group">
                       <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
                       <Link
+                        onClick={() => setMenuOpen(false)}
                         href="/services/eem"
                         className="text-gray-700 group-hover:text-blue-600 transition-colors"
                       >
@@ -304,6 +253,7 @@ const Navbar = () => {
                     <li className="flex items-start gap-0.5 group mt-2">
                       <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
                       <Link
+                        onClick={() => setMenuOpen(false)}
                         href="/services/ppc"
                         className="text-gray-700 group-hover:text-blue-600 transition-colors"
                       >
@@ -314,6 +264,7 @@ const Navbar = () => {
                     <li className="flex items-start gap-0.5 group mt-2">
                       <ChevronRight className="w-4 h-4  mt-1 transition-transform duration-300 group-hover:translate-x-1" />
                       <Link
+                        onClick={() => setMenuOpen(false)}
                         href="/services/cbm"
                         className="text-gray-700 group-hover:text-blue-600 transition-colors"
                       >
@@ -326,6 +277,7 @@ const Navbar = () => {
             </div>
 
             <Link
+              onClick={() => setMenuOpen(false)}
               href="/testimonials"
               className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item my-2"
             >
@@ -333,6 +285,7 @@ const Navbar = () => {
             </Link>
 
             <Link
+              onClick={() => setMenuOpen(false)}
               href="/contactus"
               className="block  font-medium text-gray-700   hover:text-blue-500 text-[16px] nav-item"
             >
